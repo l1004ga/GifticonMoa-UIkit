@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		727F136BA58F96AE30CF4D93 /* Pods_GifticonMoad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADBE476FA4495B30E865641 /* Pods_GifticonMoad.framework */; };
+		D708C7872A1B6EBF0063CBF0 /* AddGifticon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D708C7862A1B6EBF0063CBF0 /* AddGifticon.storyboard */; };
+		D708C7892A1B6ED30063CBF0 /* AddGifticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708C7882A1B6ED30063CBF0 /* AddGifticonViewController.swift */; };
+		D7584DEF2A14B82D00B29D68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584DEE2A14B82D00B29D68 /* AppDelegate.swift */; };
+		D7584DF12A14B82D00B29D68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584DF02A14B82D00B29D68 /* SceneDelegate.swift */; };
+		D7584DF32A14B82D00B29D68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584DF22A14B82D00B29D68 /* ViewController.swift */; };
+		D7584DF62A14B82D00B29D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7584DF42A14B82D00B29D68 /* Main.storyboard */; };
+		D7584DF92A14B82D00B29D68 /* GifticonMoad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7584DF72A14B82D00B29D68 /* GifticonMoad.xcdatamodeld */; };
+		D7584DFB2A14B82E00B29D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7584DFA2A14B82E00B29D68 /* Assets.xcassets */; };
+		D7584DFE2A14B82E00B29D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7584DFC2A14B82E00B29D68 /* LaunchScreen.storyboard */; };
+		D7584E092A14B82E00B29D68 /* GifticonMoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584E082A14B82E00B29D68 /* GifticonMoadTests.swift */; };
+		D7584E132A14B82E00B29D68 /* GifticonMoadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584E122A14B82E00B29D68 /* GifticonMoadUITests.swift */; };
+		D7584E152A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584E142A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift */; };
+		D7F1D97D2A14CBF8007505F3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1D97B2A14CBF8007505F3 /* CardCell.swift */; };
+		D7F1D97E2A14CBF8007505F3 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F1D97C2A14CBF8007505F3 /* CardCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7584E052A14B82E00B29D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7584DE32A14B82D00B29D68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7584DEA2A14B82D00B29D68;
+			remoteInfo = GifticonMoad;
+		};
+		D7584E0F2A14B82E00B29D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7584DE32A14B82D00B29D68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7584DEA2A14B82D00B29D68;
+			remoteInfo = GifticonMoad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62E37E088E30712449382D97 /* Pods-GifticonMoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifticonMoad.release.xcconfig"; path = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad.release.xcconfig"; sourceTree = "<group>"; };
+		AADBE476FA4495B30E865641 /* Pods_GifticonMoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifticonMoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D708C7862A1B6EBF0063CBF0 /* AddGifticon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddGifticon.storyboard; sourceTree = "<group>"; };
+		D708C7882A1B6ED30063CBF0 /* AddGifticonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGifticonViewController.swift; sourceTree = "<group>"; };
+		D7584DEB2A14B82D00B29D68 /* GifticonMoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifticonMoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7584DEE2A14B82D00B29D68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7584DF02A14B82D00B29D68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D7584DF22A14B82D00B29D68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7584DF52A14B82D00B29D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7584DF82A14B82D00B29D68 /* GifticonMoad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GifticonMoad.xcdatamodel; sourceTree = "<group>"; };
+		D7584DFA2A14B82E00B29D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7584DFD2A14B82E00B29D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7584DFF2A14B82E00B29D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7584E042A14B82E00B29D68 /* GifticonMoadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifticonMoadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7584E082A14B82E00B29D68 /* GifticonMoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMoadTests.swift; sourceTree = "<group>"; };
+		D7584E0E2A14B82E00B29D68 /* GifticonMoadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifticonMoadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7584E122A14B82E00B29D68 /* GifticonMoadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMoadUITests.swift; sourceTree = "<group>"; };
+		D7584E142A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMoadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7F1D97B2A14CBF8007505F3 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		D7F1D97C2A14CBF8007505F3 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		F9816A8667582AB755FB779B /* Pods-GifticonMoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifticonMoad.debug.xcconfig"; path = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7584DE82A14B82D00B29D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727F136BA58F96AE30CF4D93 /* Pods_GifticonMoad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7584E012A14B82E00B29D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7584E0B2A14B82E00B29D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36138F82723D087C20E0E018 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9816A8667582AB755FB779B /* Pods-GifticonMoad.debug.xcconfig */,
+				62E37E088E30712449382D97 /* Pods-GifticonMoad.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7BFA03E985AA1633955E07E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AADBE476FA4495B30E865641 /* Pods_GifticonMoad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7584DE22A14B82D00B29D68 = {
+			isa = PBXGroup;
+			children = (
+				D7584DED2A14B82D00B29D68 /* GifticonMoad */,
+				D7584E072A14B82E00B29D68 /* GifticonMoadTests */,
+				D7584E112A14B82E00B29D68 /* GifticonMoadUITests */,
+				D7584DEC2A14B82D00B29D68 /* Products */,
+				36138F82723D087C20E0E018 /* Pods */,
+				C7BFA03E985AA1633955E07E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D7584DEC2A14B82D00B29D68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7584DEB2A14B82D00B29D68 /* GifticonMoad.app */,
+				D7584E042A14B82E00B29D68 /* GifticonMoadTests.xctest */,
+				D7584E0E2A14B82E00B29D68 /* GifticonMoadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7584DED2A14B82D00B29D68 /* GifticonMoad */ = {
+			isa = PBXGroup;
+			children = (
+				D7F1D9C12A1B366B007505F3 /* add */,
+				D7F1D9C02A1B3658007505F3 /* main */,
+				D7584DEE2A14B82D00B29D68 /* AppDelegate.swift */,
+				D7584DF02A14B82D00B29D68 /* SceneDelegate.swift */,
+				D7584DFA2A14B82E00B29D68 /* Assets.xcassets */,
+				D7584DFC2A14B82E00B29D68 /* LaunchScreen.storyboard */,
+				D7584DFF2A14B82E00B29D68 /* Info.plist */,
+				D7584DF72A14B82D00B29D68 /* GifticonMoad.xcdatamodeld */,
+			);
+			path = GifticonMoad;
+			sourceTree = "<group>";
+		};
+		D7584E072A14B82E00B29D68 /* GifticonMoadTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7584E082A14B82E00B29D68 /* GifticonMoadTests.swift */,
+			);
+			path = GifticonMoadTests;
+			sourceTree = "<group>";
+		};
+		D7584E112A14B82E00B29D68 /* GifticonMoadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7584E122A14B82E00B29D68 /* GifticonMoadUITests.swift */,
+				D7584E142A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift */,
+			);
+			path = GifticonMoadUITests;
+			sourceTree = "<group>";
+		};
+		D7F1D9C02A1B3658007505F3 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				D7F1D97B2A14CBF8007505F3 /* CardCell.swift */,
+				D7F1D97C2A14CBF8007505F3 /* CardCell.xib */,
+				D7584DF22A14B82D00B29D68 /* ViewController.swift */,
+				D7584DF42A14B82D00B29D68 /* Main.storyboard */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		D7F1D9C12A1B366B007505F3 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				D708C7862A1B6EBF0063CBF0 /* AddGifticon.storyboard */,
+				D708C7882A1B6ED30063CBF0 /* AddGifticonViewController.swift */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7584DEA2A14B82D00B29D68 /* GifticonMoad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7584E182A14B82E00B29D68 /* Build configuration list for PBXNativeTarget "GifticonMoad" */;
+			buildPhases = (
+				71A0FB80AE1334A03D5DA9A7 /* [CP] Check Pods Manifest.lock */,
+				D7584DE72A14B82D00B29D68 /* Sources */,
+				D7584DE82A14B82D00B29D68 /* Frameworks */,
+				D7584DE92A14B82D00B29D68 /* Resources */,
+				05A3425F810FAB6BB03249AE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GifticonMoad;
+			productName = GifticonMoad;
+			productReference = D7584DEB2A14B82D00B29D68 /* GifticonMoad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7584E032A14B82E00B29D68 /* GifticonMoadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7584E1B2A14B82E00B29D68 /* Build configuration list for PBXNativeTarget "GifticonMoadTests" */;
+			buildPhases = (
+				D7584E002A14B82E00B29D68 /* Sources */,
+				D7584E012A14B82E00B29D68 /* Frameworks */,
+				D7584E022A14B82E00B29D68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7584E062A14B82E00B29D68 /* PBXTargetDependency */,
+			);
+			name = GifticonMoadTests;
+			productName = GifticonMoadTests;
+			productReference = D7584E042A14B82E00B29D68 /* GifticonMoadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7584E0D2A14B82E00B29D68 /* GifticonMoadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7584E1E2A14B82E00B29D68 /* Build configuration list for PBXNativeTarget "GifticonMoadUITests" */;
+			buildPhases = (
+				D7584E0A2A14B82E00B29D68 /* Sources */,
+				D7584E0B2A14B82E00B29D68 /* Frameworks */,
+				D7584E0C2A14B82E00B29D68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7584E102A14B82E00B29D68 /* PBXTargetDependency */,
+			);
+			name = GifticonMoadUITests;
+			productName = GifticonMoadUITests;
+			productReference = D7584E0E2A14B82E00B29D68 /* GifticonMoadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7584DE32A14B82D00B29D68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					D7584DEA2A14B82D00B29D68 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					D7584E032A14B82E00B29D68 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = D7584DEA2A14B82D00B29D68;
+					};
+					D7584E0D2A14B82E00B29D68 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = D7584DEA2A14B82D00B29D68;
+					};
+				};
+			};
+			buildConfigurationList = D7584DE62A14B82D00B29D68 /* Build configuration list for PBXProject "GifticonMoad" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7584DE22A14B82D00B29D68;
+			productRefGroup = D7584DEC2A14B82D00B29D68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7584DEA2A14B82D00B29D68 /* GifticonMoad */,
+				D7584E032A14B82E00B29D68 /* GifticonMoadTests */,
+				D7584E0D2A14B82E00B29D68 /* GifticonMoadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7584DE92A14B82D00B29D68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7584DFE2A14B82E00B29D68 /* LaunchScreen.storyboard in Resources */,
+				D7584DFB2A14B82E00B29D68 /* Assets.xcassets in Resources */,
+				D7584DF62A14B82D00B29D68 /* Main.storyboard in Resources */,
+				D708C7872A1B6EBF0063CBF0 /* AddGifticon.storyboard in Resources */,
+				D7F1D97E2A14CBF8007505F3 /* CardCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7584E022A14B82E00B29D68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7584E0C2A14B82E00B29D68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05A3425F810FAB6BB03249AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71A0FB80AE1334A03D5DA9A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GifticonMoad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7584DE72A14B82D00B29D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F1D97D2A14CBF8007505F3 /* CardCell.swift in Sources */,
+				D7584DF32A14B82D00B29D68 /* ViewController.swift in Sources */,
+				D7584DF92A14B82D00B29D68 /* GifticonMoad.xcdatamodeld in Sources */,
+				D708C7892A1B6ED30063CBF0 /* AddGifticonViewController.swift in Sources */,
+				D7584DEF2A14B82D00B29D68 /* AppDelegate.swift in Sources */,
+				D7584DF12A14B82D00B29D68 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7584E002A14B82E00B29D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7584E092A14B82E00B29D68 /* GifticonMoadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7584E0A2A14B82E00B29D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7584E152A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift in Sources */,
+				D7584E132A14B82E00B29D68 /* GifticonMoadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7584E062A14B82E00B29D68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7584DEA2A14B82D00B29D68 /* GifticonMoad */;
+			targetProxy = D7584E052A14B82E00B29D68 /* PBXContainerItemProxy */;
+		};
+		D7584E102A14B82E00B29D68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7584DEA2A14B82D00B29D68 /* GifticonMoad */;
+			targetProxy = D7584E0F2A14B82E00B29D68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7584DF42A14B82D00B29D68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7584DF52A14B82D00B29D68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7584DFC2A14B82E00B29D68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7584DFD2A14B82E00B29D68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7584E162A14B82E00B29D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7584E172A14B82E00B29D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7584E192A14B82E00B29D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9816A8667582AB755FB779B /* Pods-GifticonMoad.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RG9LBF3XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GifticonMoad/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jina.GifticonMoad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7584E1A2A14B82E00B29D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E37E088E30712449382D97 /* Pods-GifticonMoad.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RG9LBF3XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GifticonMoad/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jina.GifticonMoad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7584E1C2A14B82E00B29D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RG9LBF3XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jina.GifticonMoadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifticonMoad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifticonMoad";
+			};
+			name = Debug;
+		};
+		D7584E1D2A14B82E00B29D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RG9LBF3XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jina.GifticonMoadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifticonMoad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifticonMoad";
+			};
+			name = Release;
+		};
+		D7584E1F2A14B82E00B29D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RG9LBF3XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jina.GifticonMoadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GifticonMoad;
+			};
+			name = Debug;
+		};
+		D7584E202A14B82E00B29D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RG9LBF3XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jina.GifticonMoadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GifticonMoad;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7584DE62A14B82D00B29D68 /* Build configuration list for PBXProject "GifticonMoad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7584E162A14B82E00B29D68 /* Debug */,
+				D7584E172A14B82E00B29D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7584E182A14B82E00B29D68 /* Build configuration list for PBXNativeTarget "GifticonMoad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7584E192A14B82E00B29D68 /* Debug */,
+				D7584E1A2A14B82E00B29D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7584E1B2A14B82E00B29D68 /* Build configuration list for PBXNativeTarget "GifticonMoadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7584E1C2A14B82E00B29D68 /* Debug */,
+				D7584E1D2A14B82E00B29D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7584E1E2A14B82E00B29D68 /* Build configuration list for PBXNativeTarget "GifticonMoadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7584E1F2A14B82E00B29D68 /* Debug */,
+				D7584E202A14B82E00B29D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D7584DF72A14B82D00B29D68 /* GifticonMoad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D7584DF82A14B82D00B29D68 /* GifticonMoad.xcdatamodel */,
+			);
+			currentVersion = D7584DF82A14B82D00B29D68 /* GifticonMoad.xcdatamodel */;
+			path = GifticonMoad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D7584DE32A14B82D00B29D68 /* Project object */;
+}

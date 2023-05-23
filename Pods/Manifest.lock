@@ -1,0 +1,16 @@
+PODS:
+  - CollectionViewPagingLayout (1.1.0)
+
+DEPENDENCIES:
+  - CollectionViewPagingLayout
+
+SPEC REPOS:
+  trunk:
+    - CollectionViewPagingLayout
+
+SPEC CHECKSUMS:
+  CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
+
+PODFILE CHECKSUM: 1d3788d3a5a9db308b76b2e988c3fbde4f535a4d
+
+COCOAPODS: 1.11.3
