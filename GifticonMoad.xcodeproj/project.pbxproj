@@ -20,8 +20,7 @@
 		D7584E092A14B82E00B29D68 /* GifticonMoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584E082A14B82E00B29D68 /* GifticonMoadTests.swift */; };
 		D7584E132A14B82E00B29D68 /* GifticonMoadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584E122A14B82E00B29D68 /* GifticonMoadUITests.swift */; };
 		D7584E152A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7584E142A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift */; };
-		D7F1D97D2A14CBF8007505F3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1D97B2A14CBF8007505F3 /* CardCell.swift */; };
-		D7F1D97E2A14CBF8007505F3 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F1D97C2A14CBF8007505F3 /* CardCell.xib */; };
+		D789121D2A1F306E00B22258 /* GifticonImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789121C2A1F306E00B22258 /* GifticonImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +59,7 @@
 		D7584E0E2A14B82E00B29D68 /* GifticonMoadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifticonMoadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7584E122A14B82E00B29D68 /* GifticonMoadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMoadUITests.swift; sourceTree = "<group>"; };
 		D7584E142A14B82E00B29D68 /* GifticonMoadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMoadUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D7F1D97B2A14CBF8007505F3 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
-		D7F1D97C2A14CBF8007505F3 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		D789121C2A1F306E00B22258 /* GifticonImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9816A8667582AB755FB779B /* Pods-GifticonMoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifticonMoad.debug.xcconfig"; path = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,10 +163,9 @@
 		D7F1D9C02A1B3658007505F3 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				D7F1D97B2A14CBF8007505F3 /* CardCell.swift */,
-				D7F1D97C2A14CBF8007505F3 /* CardCell.xib */,
 				D7584DF22A14B82D00B29D68 /* ViewController.swift */,
 				D7584DF42A14B82D00B29D68 /* Main.storyboard */,
+				D789121C2A1F306E00B22258 /* GifticonImageCollectionViewCell.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 				D7584DFB2A14B82E00B29D68 /* Assets.xcassets in Resources */,
 				D7584DF62A14B82D00B29D68 /* Main.storyboard in Resources */,
 				D708C7872A1B6EBF0063CBF0 /* AddGifticon.storyboard in Resources */,
-				D7F1D97E2A14CBF8007505F3 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,8 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F1D97D2A14CBF8007505F3 /* CardCell.swift in Sources */,
 				D7584DF32A14B82D00B29D68 /* ViewController.swift in Sources */,
+				D789121D2A1F306E00B22258 /* GifticonImageCollectionViewCell.swift in Sources */,
 				D7584DF92A14B82D00B29D68 /* GifticonMoad.xcdatamodeld in Sources */,
 				D708C7892A1B6ED30063CBF0 /* AddGifticonViewController.swift in Sources */,
 				D7584DEF2A14B82D00B29D68 /* AppDelegate.swift in Sources */,
@@ -545,6 +541,9 @@
 				DEVELOPMENT_TEAM = 4RG9LBF3XF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GifticonMoad/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 접근을 위해 권한이 필요합니다. 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -574,6 +573,9 @@
 				DEVELOPMENT_TEAM = 4RG9LBF3XF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GifticonMoad/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 접근을 위해 권한이 필요합니다. 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
