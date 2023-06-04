@@ -13,4 +13,14 @@ class GifticonImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gifticonIamge: UIImageView!
     
     @IBOutlet weak var gifticonInfo: UIView!
+    
+    @IBOutlet weak var gifticonDday: UILabel!
+    
+    
+    @IBOutlet weak var gifticonStore: UILabel!
+    
+    @IBOutlet weak var gifticonMoney: UILabel!
+    
+    
+    @IBOutlet weak var gifticonExpire: UILabel!
 }
