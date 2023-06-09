@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="693"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-1s-k7y">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="622"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ntg-Xf-DEH">
                                                 <rect key="frame" x="30" y="30" width="333" height="30"/>
@@ -149,6 +150,32 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ohz-9w-Nbh">
+                                                <rect key="frame" x="30" y="617" width="333" height="29.666666666666629"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용여부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-y9-UjW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="203" height="29.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIA-ek-gjJ">
+                                                        <rect key="frame" x="233" y="0.0" width="100" height="29.666666666666668"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="M2W-lM-Bhq"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="사용가능">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                            <color key="baseBackgroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="StatusChange:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AcI-vS-1Re"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -156,8 +183,11 @@
                                             <constraint firstAttribute="trailing" secondItem="TOG-1D-M7X" secondAttribute="trailing" constant="30" id="1f5-Od-RU3"/>
                                             <constraint firstItem="bOr-bC-2ct" firstAttribute="top" secondItem="8zW-j3-wd4" secondAttribute="bottom" constant="15" id="3ra-Io-ngn"/>
                                             <constraint firstItem="oJ8-aC-SP5" firstAttribute="leading" secondItem="GC7-1s-k7y" secondAttribute="leading" constant="30" id="69u-DQ-VG0"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ohz-9w-Nbh" secondAttribute="bottom" constant="20" id="7YH-HC-Yco"/>
                                             <constraint firstItem="k93-li-6mJ" firstAttribute="top" secondItem="aVy-Da-nzA" secondAttribute="bottom" constant="15" id="9Ky-Eq-h2D"/>
                                             <constraint firstItem="k93-li-6mJ" firstAttribute="leading" secondItem="GC7-1s-k7y" secondAttribute="leading" constant="30" id="ANN-HX-DP9"/>
+                                            <constraint firstItem="Ohz-9w-Nbh" firstAttribute="top" secondItem="bOr-bC-2ct" secondAttribute="bottom" constant="15" id="Bbg-TJ-pnB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ohz-9w-Nbh" secondAttribute="trailing" constant="30" id="IF8-pF-5TM"/>
                                             <constraint firstItem="aVy-Da-nzA" firstAttribute="top" secondItem="Ntg-Xf-DEH" secondAttribute="bottom" constant="15" id="Jii-bE-vDM"/>
                                             <constraint firstItem="TOG-1D-M7X" firstAttribute="top" secondItem="k93-li-6mJ" secondAttribute="bottom" constant="30" id="Ok0-oC-ZKw"/>
                                             <constraint firstItem="Ntg-Xf-DEH" firstAttribute="top" secondItem="GC7-1s-k7y" secondAttribute="top" constant="30" id="Xcd-XP-ggQ"/>
@@ -169,8 +199,8 @@
                                             <constraint firstItem="V78-oC-GAO" firstAttribute="leading" secondItem="GC7-1s-k7y" secondAttribute="leading" constant="30" id="hln-L7-wDs"/>
                                             <constraint firstAttribute="trailing" secondItem="bOr-bC-2ct" secondAttribute="trailing" constant="30" id="ixB-9K-SPZ"/>
                                             <constraint firstAttribute="trailing" secondItem="8zW-j3-wd4" secondAttribute="trailing" constant="30" id="mIz-L9-y00"/>
-                                            <constraint firstAttribute="bottom" secondItem="bOr-bC-2ct" secondAttribute="bottom" constant="20" id="mks-Wr-ISB"/>
                                             <constraint firstItem="bOr-bC-2ct" firstAttribute="leading" secondItem="GC7-1s-k7y" secondAttribute="leading" constant="30" id="qdE-sY-SCZ"/>
+                                            <constraint firstItem="Ohz-9w-Nbh" firstAttribute="leading" secondItem="GC7-1s-k7y" secondAttribute="leading" constant="30" id="siX-bt-Wpr"/>
                                             <constraint firstAttribute="trailing" secondItem="V78-oC-GAO" secondAttribute="trailing" constant="30" id="uBx-fi-MKl"/>
                                             <constraint firstItem="oJ8-aC-SP5" firstAttribute="top" secondItem="V78-oC-GAO" secondAttribute="bottom" constant="10" id="vW8-VL-KEv"/>
                                             <constraint firstItem="V78-oC-GAO" firstAttribute="top" secondItem="TOG-1D-M7X" secondAttribute="bottom" constant="30" id="yMg-ot-RHY"/>
@@ -252,10 +282,12 @@
                         <outlet property="addImageBtn" destination="k93-li-6mJ" id="CB8-gO-ezO"/>
                         <outlet property="backBtn" destination="DQd-6D-tTn" id="Bza-CC-6NG"/>
                         <outlet property="deleteBtn" destination="NIe-4S-ghk" id="AOS-m2-QRP"/>
+                        <outlet property="gifticonAddMainView" destination="GC7-1s-k7y" id="XnA-ec-LOc"/>
                         <outlet property="gifticonEtc" destination="To1-wM-0K7" id="rQD-pX-3H4"/>
                         <outlet property="gifticonExpire" destination="RGo-9P-xQc" id="jcx-ia-UnP"/>
                         <outlet property="gifticonImage" destination="TOG-1D-M7X" id="1sx-Xm-aYH"/>
                         <outlet property="gifticonMoney" destination="ueD-Lv-DL5" id="ggI-dA-7SE"/>
+                        <outlet property="gifticonStatus" destination="wIA-ek-gjJ" id="tS0-zQ-j5g"/>
                         <outlet property="gifticonStore" destination="OIa-k5-tZ5" id="5qi-zL-lD1"/>
                         <outlet property="saveBtn" destination="42X-Nv-IjE" id="0Ep-kb-cf7"/>
                         <outlet property="scrollView" destination="pxp-Tg-1JE" id="qT8-vX-fTP"/>
@@ -271,6 +303,12 @@
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="117" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

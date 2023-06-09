@@ -7,6 +7,7 @@
         <attribute name="etc" optional="YES" attributeType="String"/>
         <attribute name="expiration" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="imageInfo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="store" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>

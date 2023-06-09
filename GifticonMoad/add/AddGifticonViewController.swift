@@ -18,25 +18,37 @@ class AddGifticonViewController: UIViewController {
     
     @IBOutlet var addImageBtn: UIButton!
     
+    @IBOutlet weak var gifticonAddMainView: UIView!
+    
+    // 기프티콘 정보 작성 관련 변수
+    
     @IBOutlet weak var gifticonImage: UIImageView!
     
     @IBOutlet weak var gifticonMoney: UITextField!
     
     @IBOutlet weak var gifticonStore: UITextField!
     
-    
     @IBOutlet weak var gifticonExpire: UIDatePicker!
     
-    
     @IBOutlet weak var gifticonEtc: UITextField!
+    
+    @IBOutlet weak var gifticonStatus: UIButton!
+    
+    var usingStatus : Bool = true
+    
+    // 기프티콘 정보 작성 관련 변수
+    
+    // 데이터 저장 및 뷰 이동 관련 변수
     
     @IBOutlet weak var deleteBtn: UIButton!
     
     @IBOutlet weak var backBtn: UIButton!
     
     @IBOutlet weak var saveBtn: UIButton!
-        
+    
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    // 데이터 저장 및 뷰 이동 관련 변수
     
     
     
@@ -53,7 +65,18 @@ class AddGifticonViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
         self.hideKeyboardWhenTappedAround()
+        
+//        self.gifticonStatus.backgroundColor = .blue
+        self.gifticonStatus.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
+        self.gifticonStatus.setTitle("사용가능", for: .normal)
+        self.gifticonStatus.layer.cornerRadius = 8
+        
+        print("현재 상태(true) : \(self.usingStatus)")
+        
+        gifticonStatus.addTarget(self, action: #selector(StatusChange), for: .touchUpInside)
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -64,10 +87,13 @@ class AddGifticonViewController: UIViewController {
             self.gifticonStore.text = hasData.store
             self.gifticonMoney.text = String(hasData.amount)
             self.gifticonEtc.text = hasData.etc
+            self.usingStatus = hasData.status
+            
+            statusDesign()
             
             // 버튼 이름 변경
             self.saveBtn.setTitle("수정하기", for: .normal)
-//            self.saveBtn.titleLabel?.font = UIFont.systemFont(ofSize: 19.0, weight: .bold)
+            //            self.saveBtn.titleLabel?.font = UIFont.systemFont(ofSize: 19.0, weight: .bold)
             
             // 삭제 버튼 보이게
             self.deleteBtn.isHidden = false
@@ -82,8 +108,8 @@ class AddGifticonViewController: UIViewController {
     
     @objc private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
-                return
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
         }
         
         let contentInset = UIEdgeInsets(
@@ -100,7 +126,28 @@ class AddGifticonViewController: UIViewController {
         scrollView.contentInset = contentInset
         scrollView.scrollIndicatorInsets = contentInset
     }
-
+    
+    
+    @IBAction func StatusChange(_ sender: Any) {
+        usingStatus.toggle()
+        //        gifticonStatus.backgroundColor = usingStatus ? .red : .blue
+        
+        statusDesign()
+    }
+    
+    @objc func statusDesign() {
+        if usingStatus {
+            self.gifticonStatus.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
+            self.gifticonStatus.setTitle("사용가능", for: .normal)
+            print("현재 상태(true) : \(self.usingStatus)")
+        } else {
+            self.gifticonStatus.backgroundColor = UIColor.red.withAlphaComponent(0.3)
+            self.gifticonStatus.setTitle("사용완료", for: .normal)
+            print("현재 상태(false) : \(self.usingStatus)")
+        }
+    }
+    
+    
     
     @IBAction func deleteAddingView(_ sender: Any) {
         
@@ -165,6 +212,12 @@ class AddGifticonViewController: UIViewController {
         // 7. UUID
         object.uuid = UUID()
         
+        // 8. 사용가능 상태
+        // 처음 등록 시에는 '사용 가능' 상태로 저장됨
+        object.status = usingStatus
+        
+        print("1. 저장 내용 : \(object.status)")
+        
         appDelegate.saveContext()
     }
     
@@ -181,7 +234,7 @@ class AddGifticonViewController: UIViewController {
         // fetchRequest의 조건을 달 수 있는 포맷
         // uuid는 CVarArg타입이다
         fetchRequest.predicate = NSPredicate(format: "uuid = %@", hasUUID as CVarArg)
-    
+        
         do {
             let loadedData = try context.fetch(fetchRequest)
             loadedData.first?.imageInfo = gifticonImage.image?.pngData()
@@ -197,8 +250,9 @@ class AddGifticonViewController: UIViewController {
             loadedData.first?.expiration = gifticonExpire.date
             loadedData.first?.date = Date()
             loadedData.first?.uuid = hasUUID
+            loadedData.first?.status = usingStatus
             
-
+            print("2. 업데이트 내용 : \(loadedData.first?.status)")
             
         } catch {
             print(error)
@@ -208,29 +262,29 @@ class AddGifticonViewController: UIViewController {
     }
     
     func deleteGifticon() {
-            
-            let context = self.appDelegate.persistentContainer.viewContext
-            
-            guard let hasData = selectedGifticon else { return }
-            
-            let fetchRequest: NSFetchRequest<GifticonList> = GifticonList.fetchRequest()
-            
-            guard let hasUUID = hasData.uuid else { return }
-            
-            // fetchRequest의 조건을 달 수 있는 포맷
-            // uuid는 CVarArg타입이다
-            fetchRequest.predicate = NSPredicate(format: "uuid = %@", hasUUID as CVarArg)
         
-            do {
-                let loadedData = try context.fetch(fetchRequest)
-                
-                if let hasData = loadedData.first {
-                    context.delete(hasData)
-                    appDelegate.saveContext()
-                }
-            } catch {
-                print(error)
+        let context = self.appDelegate.persistentContainer.viewContext
+        
+        guard let hasData = selectedGifticon else { return }
+        
+        let fetchRequest: NSFetchRequest<GifticonList> = GifticonList.fetchRequest()
+        
+        guard let hasUUID = hasData.uuid else { return }
+        
+        // fetchRequest의 조건을 달 수 있는 포맷
+        // uuid는 CVarArg타입이다
+        fetchRequest.predicate = NSPredicate(format: "uuid = %@", hasUUID as CVarArg)
+        
+        do {
+            let loadedData = try context.fetch(fetchRequest)
+            
+            if let hasData = loadedData.first {
+                context.delete(hasData)
+                appDelegate.saveContext()
             }
+        } catch {
+            print(error)
+        }
         
         delegate?.didFinishSaveData()
         self.dismiss(animated: true)

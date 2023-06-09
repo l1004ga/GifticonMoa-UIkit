@@ -48,6 +48,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.19788816570000001" green="0.19867721199999999" blue="0.59968394039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="statusEnable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ga-S7-ZEW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iam-Zo-ZXz">
                                         <rect key="frame" x="95.333333333333343" y="0.0" width="93.333333333333343" height="38"/>
@@ -63,6 +66,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="statusDisable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4yv-ca-x5w"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -270,6 +276,7 @@
                     <connections>
                         <outlet property="addViewBtn" destination="iUi-DK-Ren" id="g3A-Ua-6sD"/>
                         <outlet property="collectionIamgeView" destination="Uba-fM-Mld" id="WGr-1e-EqZ"/>
+                        <outlet property="disableBtn" destination="Iam-Zo-ZXz" id="yAB-XJ-HGI"/>
                         <outlet property="enableBtn" destination="naI-Xq-4P1" id="ZlS-Q8-lsi"/>
                     </connections>
                 </viewController>
