@@ -541,7 +541,7 @@
 				DEVELOPMENT_TEAM = 4RG9LBF3XF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GifticonMoad/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "기프티콘 모아";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "사진 접근을 위해 권한이 필요합니다. 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -573,7 +573,7 @@
 				DEVELOPMENT_TEAM = 4RG9LBF3XF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GifticonMoad/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "기프티콘 모아";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "사진 접근을 위해 권한이 필요합니다. 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

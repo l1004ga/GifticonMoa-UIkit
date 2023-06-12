@@ -37,7 +37,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     func gifticonStatusParsing() {
         self.gifticonEnable = gifticonList.filter{ $0.status == true }
+        self.gifticonEnable?.sort(by: { first, second in
+            if first.expiration! < second.expiration! {
+                return true
+            }
+            return false
+        })
         self.gifticonDisable = gifticonList.filter{ $0.status == false }
+        self.gifticonDisable?.sort(by: { first, second in
+            if first.expiration! < second.expiration! {
+                return true
+            }
+            return false
+        })
     }
 
     
@@ -154,9 +166,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
 
         if self.usingStatus {
+            //이미지
             cell.gifticonIamge.image = UIImage(data: enableGifticon[indexPath.row].imageInfo ?? Data())
-            //Dday
-    //        cell.gifticonDday.text = enableGifticon[indexPath.row].date
 
             //교환처
             cell.gifticonStore.text = enableGifticon[indexPath.row].store
@@ -166,18 +177,32 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
             // 유효기간
             if let expireData = enableGifticon[indexPath.row].expiration {
-
+                
+                let calendar = Calendar.current
                 let dateFormatter = DateFormatter()
+                var dDayCount : Int = 0
                 dateFormatter.dateFormat = "yyyy/MM/dd"
+                dDayCount = calendar.dateComponents([.day], from: expireData, to: Date()).day!
+                
+                switch dDayCount {
+                case 0:
+                    cell.gifticonDday.text = String("D-Day")
+                case ..<0:
+                    cell.gifticonDday.text = String("D\(dDayCount)")
+                case 1...:
+                    cell.gifticonDday.text = String("D+\(dDayCount)")
+                default:
+                    cell.gifticonDday.text = String("D-Day")
+                }
+            
                 cell.gifticonExpire.text = dateFormatter.string(from: expireData)
             } else {
                 cell.gifticonExpire.text = "입력필요"
             }
         } else {
+            //이미지
             cell.gifticonIamge.image = UIImage(data: disableGifticon[indexPath.row].imageInfo ?? Data())
-            //Dday
-    //        cell.gifticonDday.text = disableGifticon[indexPath.row].date
-
+            
             //교환처
             cell.gifticonStore.text = disableGifticon[indexPath.row].store
 
@@ -187,8 +212,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             // 유효기간
             if let expireData = disableGifticon[indexPath.row].expiration {
 
+                let calendar = Calendar.current
                 let dateFormatter = DateFormatter()
+                var dDayCount : Int = 0
                 dateFormatter.dateFormat = "yyyy/MM/dd"
+                dDayCount = calendar.dateComponents([.day], from: expireData, to: Date()).day!
+                
+                switch dDayCount {
+                case 0:
+                    cell.gifticonDday.text = String("D-Day")
+                case ..<0:
+                    cell.gifticonDday.text = String("D\(dDayCount)")
+                case 1...:
+                    cell.gifticonDday.text = String("D+\(dDayCount)")
+                default:
+                    cell.gifticonDday.text = String("D-Day")
+                }
+                
                 cell.gifticonExpire.text = dateFormatter.string(from: expireData)
             } else {
                 cell.gifticonExpire.text = "입력필요"
@@ -204,6 +244,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
         
     }
+    
     
     // Cell 각각 선택 시 액션
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
