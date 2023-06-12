@@ -73,6 +73,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.disableBtn.setTitle("사용완료", for: .normal)
         self.enableBtn.setTitleColor(.mainColor, for: .normal)
         self.disableBtn.setTitleColor(.gray, for: .normal)
+        self.enableBtn.configuration?.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+        self.disableBtn.configuration?.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 0)
+        
+        
         
         // 기프티콘 상태변경 버튼 터치 시 이벤트 탐색
         enableBtn.addTarget(self, action: #selector(statusEnable), for: .touchUpInside)
