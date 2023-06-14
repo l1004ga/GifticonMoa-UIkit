@@ -80,9 +80,21 @@ class AddGifticonViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         // 선택한 기프티콘이 있을 때
         if let hasData = selectedGifticon {
-            self.gifticonImage.image = UIImage(data: hasData.imageInfo ?? Data())
+            
+            var loadedImage = UIImage(data: hasData.imageInfo ?? Data())
+            let ImageViewWidth = self.gifticonImage.frame.size.width
+            let scale = ImageViewWidth / loadedImage!.size.width // 0.293
+            let height = loadedImage!.size.height * scale
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: ImageViewWidth, height: height), false, 0.0)
+            loadedImage!.draw(in: CGRect(x: 0, y: 0, width: ImageViewWidth, height: height))
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            self.gifticonImage.image = newImage
+
+            
             self.gifticonExpire.date = hasData.expiration ?? Date()
             self.gifticonStore.text = hasData.store
             self.gifticonMoney.text = String(hasData.amount)
@@ -311,7 +323,7 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         let alert = UIAlertController(title: "취소 알림", message: "이미지 선택이 취소되었습니다.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .cancel))
         self.present(alert, animated: true)
-        
+        self.dismiss(animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -324,16 +336,17 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
             
             let resizeImage = self.resizeImage(image: checkImage!, width: self.gifticonImage.frame.size.width)
             
-            
             self.gifticonImage.image = resizeImage
+            
+            print("저장 시 이미지 크기 : \(self.gifticonImage.image?.size.width), \(self.gifticonImage.image?.size.height)")
             
         }
     }
     
-    func resizeImage(image: UIImage, width: CGFloat) -> UIImage {
+    func resizeImage(image: UIImage, width: CGFloat) -> UIImage? {
         let scale = width / image.size.width // 0.293
         let height = image.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), false, 0.0)
         image.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
