@@ -23,6 +23,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // 기프티콘상태 버튼 변경 확인용 변수
     var usingStatus : Bool = true
     
+    
+    @IBOutlet var mainview: UIView!
+    
     @IBOutlet var collectionIamgeView: UICollectionView!
     
     @IBOutlet weak var enableBtn: UIButton!
@@ -75,8 +78,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.disableBtn.setTitleColor(.gray, for: .normal)
         self.enableBtn.configuration?.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
         self.disableBtn.configuration?.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 0)
-        
-        
         
         // 기프티콘 상태변경 버튼 터치 시 이벤트 탐색
         enableBtn.addTarget(self, action: #selector(statusEnable), for: .touchUpInside)
@@ -162,14 +163,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // collectionViewCell 형식의 cell 변수 선언
+        
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! GifticonImageCollectionViewCell
         
         guard let enableGifticon = self.gifticonEnable else { return cell }
 
         guard let disableGifticon = self.gifticonDisable else { return cell }
-
+        
+        var collectionviewWidth = self.collectionIamgeView.frame.size.width
+        // width frame 크기가 260이 아닌 282로 나옴 -> 같은 크기인 height로 대체
+        var collectionCellWidth = cell.gifticonIamge.frame.size.height
 
         if self.usingStatus {
+            
+            if enableGifticon.count == 1 {
+                
+                self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: (collectionviewWidth - collectionCellWidth) / 2, bottom: 0, right: 0)
+                
+            } else {
+                self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: 30, bottom: 0, right: 30)
+                
+            }
+            
             //이미지
             cell.gifticonIamge.image = UIImage(data: enableGifticon[indexPath.row].imageInfo ?? Data())
 
@@ -204,6 +219,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.gifticonExpire.text = "입력필요"
             }
         } else {
+            
+            if disableGifticon.count == 1 {
+                
+                self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: (collectionviewWidth - collectionCellWidth) / 2, bottom: 0, right: 0)
+                
+            } else {
+                self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: 30, bottom: 0, right: 30)
+                
+            }
+            
             //이미지
             cell.gifticonIamge.image = UIImage(data: disableGifticon[indexPath.row].imageInfo ?? Data())
             
@@ -300,3 +325,4 @@ extension ViewController: AddGifticonViewControllerDelegate {
     
     
 }
+

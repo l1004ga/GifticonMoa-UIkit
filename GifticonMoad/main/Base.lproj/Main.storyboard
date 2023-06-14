@@ -261,6 +261,7 @@
                         <outlet property="collectionIamgeView" destination="Uba-fM-Mld" id="WGr-1e-EqZ"/>
                         <outlet property="disableBtn" destination="Iam-Zo-ZXz" id="yAB-XJ-HGI"/>
                         <outlet property="enableBtn" destination="naI-Xq-4P1" id="ZlS-Q8-lsi"/>
+                        <outlet property="mainview" destination="8bC-Xf-vdC" id="o2U-sk-s8J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
