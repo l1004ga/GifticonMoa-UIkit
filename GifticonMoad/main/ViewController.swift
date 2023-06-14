@@ -186,7 +186,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 let dateFormatter = DateFormatter()
                 var dDayCount : Int = 0
                 dateFormatter.dateFormat = "yyyy/MM/dd"
-                dDayCount = calendar.dateComponents([.day], from: expireData, to: Date()).day!
+                dDayCount = calendar.dateComponents([.day], from: dateFormatter.date(from: dateFormatter.string(from: expireData)) ?? expireData, to: dateFormatter.date(from: dateFormatter.string(from: Date())) ?? Date()).day!
                 
                 switch dDayCount {
                 case 0:
@@ -220,7 +220,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 let dateFormatter = DateFormatter()
                 var dDayCount : Int = 0
                 dateFormatter.dateFormat = "yyyy/MM/dd"
-                dDayCount = calendar.dateComponents([.day], from: expireData, to: Date()).day!
+                dDayCount = calendar.dateComponents([.day], from: dateFormatter.date(from: dateFormatter.string(from: expireData)) ?? expireData, to: dateFormatter.date(from: dateFormatter.string(from: Date())) ?? Date()).day!
                 
                 switch dDayCount {
                 case 0:
