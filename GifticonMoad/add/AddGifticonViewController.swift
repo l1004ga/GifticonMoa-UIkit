@@ -264,8 +264,7 @@ class AddGifticonViewController: UIViewController {
             loadedData.first?.uuid = hasUUID
             loadedData.first?.status = usingStatus
             
-            print("2. 업데이트 내용 : \(loadedData.first?.status)")
-            
+
         } catch {
             print(error)
         }
@@ -330,16 +329,10 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         picker.dismiss(animated: false) { [self] () in
             let checkImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
             
-            print("받은 사진 가로, 세로 : [\(checkImage!.size.width), \(checkImage!.size.height)]")
-            
-            print("기본프레임 : [\(self.gifticonImage.frame.size.width), \(self.gifticonImage.frame.size.height)]")
-            
             let resizeImage = self.resizeImage(image: checkImage!, width: self.gifticonImage.frame.size.width)
             
             self.gifticonImage.image = resizeImage
-            
-            print("저장 시 이미지 크기 : \(self.gifticonImage.image?.size.width), \(self.gifticonImage.image?.size.height)")
-            
+
         }
     }
     
