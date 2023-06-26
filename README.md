@@ -26,16 +26,13 @@
 
 ## 💻 개발 도구 및 활용한 기술
 - 개발 언어 : Swift
-- 개발 환경 : Swift5 16.2, SE ~ iPhone 14 Pro 호환, 가로모드 미지원, 다크모드 미지원
+- 개발 환경 : Swift5 16.2 ~ iPhone 14 Pro 호환, 가로모드 미지원, 다크모드 미지원
 - 디자인 툴 : Figma
 - 활용한 기술
     - Xcode
-    - FCM, Firebase function
-    - KakaoSDKAuth, FBSDKCoreKit, GoogleSignIn, AppleLogin
-    - FirebaseAuth, FiresStore, Firebase Storage
-    - NaverMap API
     - CoreData
 
 
 
 ## 📝 라이센스
+### - 기프티콘 모아 is available under the GPL-3.0 license. See the [LICENSE](https://github.com/l1004ga/GifticonMoa-UIkit/blob/main/LICENSE) file for more info.
