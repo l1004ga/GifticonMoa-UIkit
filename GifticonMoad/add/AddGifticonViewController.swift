@@ -88,7 +88,7 @@ class AddGifticonViewController: UIViewController {
         if let hasData = selectedGifticon {
             
             self.gifticonTitle.text = "기프티콘 수정"
-            var loadedImage = UIImage(data: hasData.imageInfo ?? Data())
+            let loadedImage = UIImage(data: hasData.imageInfo ?? Data())
             let ImageViewWidth = self.gifticonImage.frame.size.width
             let scale = ImageViewWidth / loadedImage!.size.width // 0.293
             let height = loadedImage!.size.height * scale
