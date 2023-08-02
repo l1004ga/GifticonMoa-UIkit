@@ -104,10 +104,6 @@ class AddGifticonViewController: UIViewController {
             
             statusDesign()
             
-            // 버튼 이름 변경
-            self.saveBtn.setTitle("수정하기", for: .normal)
-            //            self.saveBtn.titleLabel?.font = UIFont.systemFont(ofSize: 19.0, weight: .bold)
-            
             // 삭제 버튼 보이게
             self.deleteBtn.isHidden = false
         } else {
