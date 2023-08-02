@@ -23,6 +23,8 @@ class AddGifticonViewController: UIViewController {
     
     // 기프티콘 정보 작성 관련 변수
     
+    @IBOutlet weak var gifticonTitle: UILabel!
+    
     @IBOutlet weak var gifticonImage: UIImageView!
     
     @IBOutlet weak var gifticonMoney: UITextField!
@@ -85,6 +87,7 @@ class AddGifticonViewController: UIViewController {
         // 선택한 기프티콘이 있을 때
         if let hasData = selectedGifticon {
             
+            self.gifticonTitle.text = "기프티콘 수정"
             var loadedImage = UIImage(data: hasData.imageInfo ?? Data())
             let ImageViewWidth = self.gifticonImage.frame.size.width
             let scale = ImageViewWidth / loadedImage!.size.width // 0.293
@@ -103,10 +106,6 @@ class AddGifticonViewController: UIViewController {
             self.usingStatus = hasData.status
             
             statusDesign()
-            
-            // 버튼 이름 변경
-            self.saveBtn.setTitle("수정하기", for: .normal)
-            //            self.saveBtn.titleLabel?.font = UIFont.systemFont(ofSize: 19.0, weight: .bold)
             
             // 삭제 버튼 보이게
             self.deleteBtn.isHidden = false

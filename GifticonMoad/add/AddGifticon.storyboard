@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -289,6 +288,7 @@
                         <outlet property="gifticonMoney" destination="ueD-Lv-DL5" id="ggI-dA-7SE"/>
                         <outlet property="gifticonStatus" destination="wIA-ek-gjJ" id="tS0-zQ-j5g"/>
                         <outlet property="gifticonStore" destination="OIa-k5-tZ5" id="5qi-zL-lD1"/>
+                        <outlet property="gifticonTitle" destination="ObO-7U-g23" id="Yum-Hv-SIY"/>
                         <outlet property="saveBtn" destination="42X-Nv-IjE" id="0Ep-kb-cf7"/>
                         <outlet property="scrollView" destination="pxp-Tg-1JE" id="qT8-vX-fTP"/>
                     </connections>
