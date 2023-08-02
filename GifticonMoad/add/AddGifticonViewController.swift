@@ -23,6 +23,8 @@ class AddGifticonViewController: UIViewController {
     
     // 기프티콘 정보 작성 관련 변수
     
+    @IBOutlet weak var gifticonTitle: UILabel!
+    
     @IBOutlet weak var gifticonImage: UIImageView!
     
     @IBOutlet weak var gifticonMoney: UITextField!
@@ -85,6 +87,7 @@ class AddGifticonViewController: UIViewController {
         // 선택한 기프티콘이 있을 때
         if let hasData = selectedGifticon {
             
+            self.gifticonTitle.text = "기프티콘 수정"
             var loadedImage = UIImage(data: hasData.imageInfo ?? Data())
             let ImageViewWidth = self.gifticonImage.frame.size.width
             let scale = ImageViewWidth / loadedImage!.size.width // 0.293
