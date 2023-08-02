@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 protocol AddGifticonViewControllerDelegate: AnyObject {
     func didFinishSaveData()
@@ -66,7 +67,7 @@ class AddGifticonViewController: UIViewController {
         
         self.hideKeyboardWhenTappedAround()
         
-//        self.gifticonStatus.backgroundColor = .blue
+        //        self.gifticonStatus.backgroundColor = .blue
         self.gifticonStatus.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
         self.gifticonStatus.setTitle("사용가능", for: .normal)
         self.gifticonStatus.layer.cornerRadius = 8
@@ -93,7 +94,7 @@ class AddGifticonViewController: UIViewController {
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             self.gifticonImage.image = newImage
-
+            
             
             self.gifticonExpire.date = hasData.expiration ?? Date()
             self.gifticonStore.text = hasData.store
@@ -159,8 +160,6 @@ class AddGifticonViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func deleteAddingView(_ sender: Any) {
         
         deleteGifticon()
@@ -199,10 +198,9 @@ class AddGifticonViewController: UIViewController {
             object.imageInfo = imageString
         }
         
-        //        guard let imageString = gifticonImage.image?.pngData()?.base64EncodedString() else { return }
-        //        object.imageInfo = imageString
         // 2.교환처
         object.store = gifticonStore.text
+        
         // 3. 금액
         // TODO: 금액 String to Int 변환 안됨
         if let moneyString = gifticonMoney.text {
@@ -228,9 +226,10 @@ class AddGifticonViewController: UIViewController {
         // 처음 등록 시에는 '사용 가능' 상태로 저장됨
         object.status = usingStatus
         
-        print("1. 저장 내용 : \(object.status)")
+        self.makeRequestNoti(id: object.uuid!, store: object.store! , expiration: object.expiration!)
         
         appDelegate.saveContext()
+        
     }
     
     func updateGifticon() {
@@ -264,7 +263,7 @@ class AddGifticonViewController: UIViewController {
             loadedData.first?.uuid = hasUUID
             loadedData.first?.status = usingStatus
             
-
+            
         } catch {
             print(error)
         }
@@ -332,7 +331,7 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
             let resizeImage = self.resizeImage(image: checkImage!, width: self.gifticonImage.frame.size.width)
             
             self.gifticonImage.image = resizeImage
-
+            
         }
     }
     
@@ -344,6 +343,48 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage!
+    }
+    
+    @objc private func makeRequestNoti(id : UUID, store : String, expiration : Date) {
+        
+        
+        let minusSevenDayExpiration = Calendar.current.date(byAdding: .day, value: -7, to: expiration)
+        let minusThreeDayExpiration = Calendar.current.date(byAdding: .day, value: -3, to: expiration)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "기프티콘 유효기간이 끝나가요!"
+        content.body = "\(store)에서 사용가능한 기프티콘의 유효기간이"
+        content.sound = .default
+        content.badge = 1
+        
+        // D-Day 알림
+        let dDayDateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: expiration)
+        let trigger1 = UNCalendarNotificationTrigger(dateMatching: dDayDateComponents, repeats: false)
+        let request1 = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger1)
+        UNUserNotificationCenter.current()
+            .add(request1) { error in
+                guard let error = error else { return }
+                print(error.localizedDescription)
+            }
+        print("실행 완료 디데이 저장됨")
+        // 7일 전 알림
+        let minusSevenDayDateComponets = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: minusSevenDayExpiration!)
+        let trigger2 = UNCalendarNotificationTrigger(dateMatching: minusSevenDayDateComponets, repeats: false)
+        let request2 = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger2)
+        UNUserNotificationCenter.current()
+            .add(request2) { error in
+                guard let error = error else { return }
+                print(error.localizedDescription)
+            }
+        print("실행 완료 7일 전 저장됨")
+        let minusThreeDayDateComponets = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: minusThreeDayExpiration!)
+        let trigger3 = UNCalendarNotificationTrigger(dateMatching: minusThreeDayDateComponets, repeats: false)
+        let request3 = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger3)
+        UNUserNotificationCenter.current().add(request3) { error in
+            guard let error = error else { return }
+            print(error.localizedDescription)
+        }
+        print("실행 완료 3일 전 저장됨")
     }
 }
 

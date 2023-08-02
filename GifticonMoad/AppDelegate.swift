@@ -7,15 +7,34 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+/*
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
+    }
+*/
+    
+    // MARK: 앱 최초 실행 시 Notification에 대한 권한 설정
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+      UNUserNotificationCenter.current().requestAuthorization(
+      // alert - 알림이 화면에 노출
+      // sound - 소리
+      // badge - 빨간색 동그라미 숫자
+        options: [.alert, .sound, .badge],
+        completionHandler: { (granted, error) in
+          print("granted notification, \(granted)")
+        }
+      )
+      
+      return true
     }
 
     // MARK: UISceneSession Lifecycle
