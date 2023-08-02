@@ -24,6 +24,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // 기프티콘상태 버튼 변경 확인용 변수
     var usingStatus : Bool = true
     
+    let imageView : UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named:"cardEmpty")
+        iv.contentMode = .scaleAspectFit
+        return iv
+    }()
+    
     
     @IBOutlet var mainview: UIView!
     
@@ -38,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var gifticonStatus : Bool = true
     
     var ImageArray = [UIImage(systemName: "globe.central.south.asia.fill"), UIImage(systemName: "sunrise"), UIImage(systemName: "cloud.sleet")]
-
+    
     func gifticonStatusParsing() {
         self.gifticonEnable = gifticonList.filter{ $0.status == true }
         self.gifticonEnable?.sort(by: { first, second in
@@ -55,7 +62,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             return false
         })
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +95,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func statusEnable(_ sender: Any) {
         self.usingStatus = true
-        print("사용가능 버튼 작동됨")
         statusDesign()
         self.fetchGifticonData()
         // 불러온 데이터를 뷰에 재로딩해줌
@@ -97,7 +103,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func statusDisable(_ sender: Any) {
         self.usingStatus = false
-        print("사용완료 버튼 작동됨")
         statusDesign()
         self.fetchGifticonData()
         // 불러온 데이터를 뷰에 재로딩해줌
@@ -105,7 +110,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @objc func statusDesign() {
-        print("버튼상태 : \(self.usingStatus)")
         if usingStatus {
             self.enableBtn.setTitle("사용가능", for: .normal)
             self.disableBtn.setTitle("사용완료", for: .normal)
@@ -133,7 +137,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func addGifiton(_ sender: Any) {
-
+        
         let storyboard = UIStoryboard.init(name: "AddGifticon", bundle: nil)
         
         guard let addGifticonVC = storyboard.instantiateViewController(withIdentifier: "AddGifticonViewController") as? AddGifticonViewController else { return }
@@ -150,14 +154,27 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         guard let enableGifticon = self.gifticonEnable else {
             return self.gifticonList.count
         }
-
+        
         guard let disableGifticon = self.gifticonDisable else {
             return self.gifticonList.count
         }
-
+        
         if self.usingStatus {
+            if enableGifticon.count == 0 {
+                collectionIamgeView.backgroundView = imageView
+            } else {
+                collectionIamgeView.backgroundView = .init()
+            }
             return enableGifticon.count
         } else {
+            print(disableGifticon.count)
+            
+            if disableGifticon.count == 0 {
+                collectionIamgeView.backgroundView = imageView
+            } else {
+                collectionIamgeView.backgroundView = .init()
+            }
+            
             return disableGifticon.count
         }
     }
@@ -167,34 +184,40 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! GifticonImageCollectionViewCell
         
-        guard let enableGifticon = self.gifticonEnable else { return cell }
-
-        guard let disableGifticon = self.gifticonDisable else { return cell }
+        guard let enableGifticon = self.gifticonEnable else {
+            return cell }
         
-        var collectionviewWidth = self.collectionIamgeView.frame.size.width
+        guard let disableGifticon = self.gifticonDisable else {
+            return cell
+            
+        }
+        
+        let collectionviewWidth = self.collectionIamgeView.frame.size.width
+        
         // width frame 크기가 260이 아닌 282로 나옴 -> 같은 크기인 height로 대체
-        var collectionCellWidth = cell.gifticonIamge.frame.size.height
-
+        let collectionCellWidth = cell.gifticonIamge.frame.size.height
+        
         if self.usingStatus {
             
-            if enableGifticon.count == 1 {
+            if enableGifticon.count == 0 || enableGifticon.count == 1 {
                 
                 self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: (collectionviewWidth - collectionCellWidth) / 2, bottom: 0, right: 0)
                 
             } else {
+                
                 self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: 30, bottom: 0, right: 30)
                 
             }
             
             //이미지
             cell.gifticonIamge.image = UIImage(data: enableGifticon[indexPath.row].imageInfo ?? Data())
-
+            
             //교환처
             cell.gifticonStore.text = enableGifticon[indexPath.row].store
-
+            
             //금액
             cell.gifticonMoney.text = String(enableGifticon[indexPath.row].amount) + "원"
-
+            
             // 유효기간
             if let expireData = enableGifticon[indexPath.row].expiration {
                 
@@ -214,14 +237,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 default:
                     cell.gifticonDday.text = String("D-Day")
                 }
-            
+                
                 cell.gifticonExpire.text = dateFormatter.string(from: expireData)
             } else {
                 cell.gifticonExpire.text = "입력필요"
             }
         } else {
             
-            if disableGifticon.count == 1 {
+            if disableGifticon.count == 0 || disableGifticon.count == 1 {
                 
                 self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: (collectionviewWidth - collectionCellWidth) / 2, bottom: 0, right: 0)
                 
@@ -235,13 +258,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             //교환처
             cell.gifticonStore.text = disableGifticon[indexPath.row].store
-
+            
             //금액
             cell.gifticonMoney.text = String(disableGifticon[indexPath.row].amount) + "원"
-
+            
             // 유효기간
             if let expireData = disableGifticon[indexPath.row].expiration {
-
+                
                 let calendar = Calendar.current
                 let dateFormatter = DateFormatter()
                 var dDayCount : Int = 0
@@ -286,16 +309,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         addGifticonVC.modalPresentationStyle = .fullScreen
         // 아래 delegate 연결을 해놔야 AddGifticonViewControllerDelegate로 호출 가능
         addGifticonVC.delegate = self
-//        addGifticonVC.selectedGifticon = gifticonList[indexPath.row]
+        //        addGifticonVC.selectedGifticon = gifticonList[indexPath.row]
         
         guard let enableGifticon = self.gifticonEnable else { addGifticonVC.selectedGifticon = gifticonList[indexPath.row]
             return
         }
-
+        
         guard let disableGifticon = self.gifticonDisable else { addGifticonVC.selectedGifticon = gifticonList[indexPath.row]
             return
         }
-
+        
         if self.usingStatus {
             addGifticonVC.selectedGifticon = enableGifticon[indexPath.row]
         } else {
@@ -307,7 +330,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 }
 
 extension UIColor {
-
+    
     class var mainColor: UIColor? { return UIColor(named: "mainColor") }
     
     class var gifticonBackColor: UIColor? { return
