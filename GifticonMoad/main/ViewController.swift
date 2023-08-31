@@ -31,6 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return iv
     }()
     
+    @IBOutlet weak var gifticonImage: UIImageView!
     
     @IBOutlet var mainview: UIView!
     
@@ -195,12 +196,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let collectionviewWidth = self.collectionIamgeView.frame.size.width
         
         // width frame 크기가 260이 아닌 282로 나옴 -> 같은 크기인 height로 대체
-        let collectionCellWidth = cell.gifticonIamge.frame.size.height
+//        let collectionCellWidth = cell.gifticonIamge.frame.size.width
+        
+        let collectionCellWidth = cell.gifticonInfo.frame.width
+        
+        print("width : \(cell.gifticonIamge.frame.size.width)")
         
         if self.usingStatus {
             
-            if enableGifticon.count == 0 || enableGifticon.count == 1 {
+            // TODO: collection 1개 있을 때 가운데 정렬 실기기 확인 필요
+            
+            if enableGifticon.count == 1 {
                 
+                print("collectionviewWidth: \(collectionviewWidth) collectionCellWidth : \(collectionCellWidth)")
                 self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: (collectionviewWidth - collectionCellWidth) / 2, bottom: 0, right: 0)
                 
             } else {
@@ -244,7 +252,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
         } else {
             
-            if disableGifticon.count == 0 || disableGifticon.count == 1 {
+            if disableGifticon.count == 1 {
+                
+                print("뷰 가로 : \(collectionviewWidth), 셀 가로 : \(collectionCellWidth)")
                 
                 self.collectionIamgeView.contentInset = UIEdgeInsets.init(top: 0, left: (collectionviewWidth - collectionCellWidth) / 2, bottom: 0, right: 0)
                 

@@ -346,7 +346,6 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
     
     @objc private func makeRequestNoti(id : UUID, store : String, expiration : Date) {
         
-        
         let minusSevenDayExpiration = Calendar.current.date(byAdding: .day, value: -7, to: expiration)
         let minusThreeDayExpiration = Calendar.current.date(byAdding: .day, value: -3, to: expiration)
         
