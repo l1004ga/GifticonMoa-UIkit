@@ -1,11 +1,11 @@
 # 기프티콘 모아(GifticonMoA)
 - [앱스토어 다운로드 바로가기](https://apps.apple.com/kr/app/%EA%B8%B0%ED%94%84%ED%8B%B0%EC%BD%98-%EB%AA%A8%EC%95%84/id6450167516)
-<img width="735" alt="스크린샷 2023-06-16 오후 4 19 09" src="https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/ce933944-5e9a-4c54-8381-8c52b0d5fc98">
+<img width="735" alt="스크린샷 2023-06-16 오후 4 19 09" src="https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/dc184494-7acf-44c4-9b1f-71b77c96870e">
 
 ## 📱 앱 소개
 - 기프티콘 이미지(바코드), 유효기간, 교환처, 금액, 사용여부를 저장하고 카드 형식으로 손쉽게 확인하고 관리하는 앱입니다.
-<img src="https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/391d9eea-8482-47d5-8029-8620ebe528e5">
 
+  
 ## 🛠️ 기술스택
 <p align="leading">
   <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=Swift&logoColor=white"/>
@@ -13,12 +13,11 @@
     <img src="https://img.shields.io/badge/UIKit-2396F3?style=for-the-badge&logo=uikit&logoColor=white"/>
 </p>
 
-
 ## 📷 스크린샷
 
 - ### 스크린샷
 
-|<img src = "https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/7bc74951-4f21-44d5-9933-4df6704f5055?width=324&height=702">|<img src = "https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/5efed5ce-c420-40ae-98a3-650241ec9eee?width=324&height=702">|<img src ="https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/ab1973dc-6e3c-49c7-a9ae-bd549f6a0c39?width=324&height=702">|<img src = "https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/f7b13361-5d9d-40ea-b3d2-4c573d78a2f1?width=324&height=702">|
+|<img src = "https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/f083348f-88e8-452d-a32f-991155c04204">|<img src = "https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/de5932be-f48a-4d01-a670-e61b62e63644">|<img src ="https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/0861e338-7536-49be-aab4-761bdc9583b0">|<img src = "https://github.com/l1004ga/GifticonMoa-UIkit/assets/55937627/0c6fb19b-8c5c-461b-91ad-ced4963f0491">|
 |:----:|:----:|:-----:|:----:|
 |`기프티콘 관리 뷰`|`기프티콘 등록 뷰`|`기프티콘 등록 뷰`|`기프티콘 등록 뷰`|
 
