@@ -60,6 +60,7 @@ class AddGifticonViewController: UIViewController {
     // 선택한 기프티콘 있을 시 사용되는 변수
     var selectedGifticon : GifticonList?
     
+    var badgeCount = UNMutableNotificationContent().badge
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +119,7 @@ class AddGifticonViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+
     @objc private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
@@ -344,45 +346,53 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         return newImage!
     }
     
+    @objc private func putDataInNotiCenter(id: UUID, expirationDate : Date, content : UNMutableNotificationContent) {
+        let DateComponets = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: expirationDate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponets, repeats: false)
+        let request = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current()
+            .add(request) { error in
+                guard let error = error else { return }
+                print(error.localizedDescription)
+            }
+    }
+    
     @objc private func makeRequestNoti(id : UUID, store : String, expiration : Date) {
-        
-        let minusSevenDayExpiration = Calendar.current.date(byAdding: .day, value: -7, to: expiration)
-        let minusThreeDayExpiration = Calendar.current.date(byAdding: .day, value: -3, to: expiration)
         
         let content = UNMutableNotificationContent()
         content.title = "기프티콘 유효기간이 끝나가요!"
         content.body = "\(store)에서 사용가능한 기프티콘의 유효기간이"
         content.sound = .default
-        content.badge = 1
+        content.badge = NSNumber(value: UIApplication.shared.applicationIconBadgeNumber + 1)
         
-        // D-Day 알림
-        let dDayDateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: expiration)
-        let trigger1 = UNCalendarNotificationTrigger(dateMatching: dDayDateComponents, repeats: false)
-        let request1 = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger1)
-        UNUserNotificationCenter.current()
-            .add(request1) { error in
-                guard let error = error else { return }
-                print(error.localizedDescription)
+        /// 총 4개의 알림(7일, 3일, 1일, 당일)
+        /// 당일의 경우 expiration 자체로 확인할 수 있음
+        if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -6, to: expiration)!) == "Future" {
+            let notiDates = [0,1,3,7]
+            for dateOfMinus in notiDates{
+                let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
+                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
             }
-        print("실행 완료 디데이 저장됨")
-        // 7일 전 알림
-        let minusSevenDayDateComponets = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: minusSevenDayExpiration!)
-        let trigger2 = UNCalendarNotificationTrigger(dateMatching: minusSevenDayDateComponets, repeats: false)
-        let request2 = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger2)
-        UNUserNotificationCenter.current()
-            .add(request2) { error in
-                guard let error = error else { return }
-                print(error.localizedDescription)
+        } else if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -2, to: expiration)!) == "Future" {
+            let notiDates = [0,1,3]
+            for dateOfMinus in notiDates{
+                let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
+                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
             }
-        print("실행 완료 7일 전 저장됨")
-        let minusThreeDayDateComponets = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: minusThreeDayExpiration!)
-        let trigger3 = UNCalendarNotificationTrigger(dateMatching: minusThreeDayDateComponets, repeats: false)
-        let request3 = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger3)
-        UNUserNotificationCenter.current().add(request3) { error in
-            guard let error = error else { return }
-            print(error.localizedDescription)
+        } else if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -1, to: expiration)!) == "Future"   {
+            let notiDates = [0,1]
+            for dateOfMinus in notiDates{
+                let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
+                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
+            }
+        } else if Date().dateCompare(fromDate: expiration) == "Future"   { //당일 알림
+            let notiDates = [0]
+            for dateOfMinus in notiDates{
+                let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
+                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
+            }
         }
-        print("실행 완료 3일 전 저장됨")
+        /// 당일, 이미 만료된 일정을 입력할 경우 수행되지 않음
     }
 }
 
@@ -396,4 +406,26 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+
+extension Date {
+    public func dateCompare(fromDate: Date) -> String {
+            var strDateMessage:String = ""
+            let result:ComparisonResult = self.compare(fromDate)
+            switch result {
+            case .orderedAscending:
+                strDateMessage = "Future"
+                break
+            case .orderedDescending:
+                strDateMessage = "Past"
+                break
+            case .orderedSame:
+                strDateMessage = "Same"
+                break
+            default:
+                strDateMessage = "Error"
+                break
+            }
+            return strDateMessage
+        }
 }
