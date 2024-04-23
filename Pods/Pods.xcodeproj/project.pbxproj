@@ -6,124 +6,209 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 49E5C1AF039CD15DFFA8FD712BECEFEB /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */;
+			buildPhases = (
+				75663638A637BADFB02A9B361E929C1F /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				32135700754A1B1E46DE9CA071C62414 /* PBXTargetDependency */,
+			);
+			name = GoogleUserMessagingPlatform;
+		};
+		FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5AFA28686097D4D6A9DD552442DAD3BE /* Build configuration list for PBXAggregateTarget "Google-Mobile-Ads-SDK" */;
+			buildPhases = (
+				E5879B1A146D320B75202C70537BC4A4 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				6AB342AED7E909980DE2C33307952C9D /* PBXTargetDependency */,
+				D1DE62BA5518253590D9F171D204F701 /* PBXTargetDependency */,
+			);
+			name = "Google-Mobile-Ads-SDK";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		0B008D95F38DC92659545A9D368CCD06 /* SnapshotTransformViewOptions.PiecePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7047CDC8A6BF2017E2141A38A18DF5A1 /* SnapshotTransformViewOptions.PiecePosition.swift */; };
-		16A66E1ECC51ABCFC8B28BB37F816C5F /* TransformCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8676937F45DDA7E1AFDDFEFE27097985 /* TransformCurve.swift */; };
+		0B008D95F38DC92659545A9D368CCD06 /* SnapshotTransformViewOptions.PiecePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436F6D20A89B1D1573D12B5CEEB1E5B /* SnapshotTransformViewOptions.PiecePosition.swift */; };
+		16A66E1ECC51ABCFC8B28BB37F816C5F /* TransformCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8AEA9027F29B1D982E484E27397D30 /* TransformCurve.swift */; };
 		1A8AC93152D20467CBD1B7716623B1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		1BE802D660F94D57E9173F34B932E68A /* SnapshotTransformViewOptions+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5A8161D06A0335D85C8791312AE3 /* SnapshotTransformViewOptions+Layout.swift */; };
-		1C466095C4A4ED6A81580D1FCF992328 /* CollectionViewPagingLayout.ZPositionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC7B6DB7AF76CFD1ED5FC7FB1189C8 /* CollectionViewPagingLayout.ZPositionHandler.swift */; };
-		218013760455E6FDDE1E1D0D08518D74 /* SnapshotContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6221651A81487C79E659AEAED2D32 /* SnapshotContainerView.swift */; };
-		22F7462179A63BC3848E7EA84C99A354 /* ScaleTransformViewOptions+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F371053D5F5545DC4EC9BC064440BE /* ScaleTransformViewOptions+Layout.swift */; };
-		2325B7D61C40B8FF368A9B9A2D64330E /* SnapshotTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FFA3CBDE8ACCD95E6BCCDFA58652F /* SnapshotTransformView.swift */; };
-		25786284001B1BDB31B46F6DA09D9188 /* ScaleTransformViewOptions.Rotation3dOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C71E8A9F2E31EF7A7C08BDF607E57C /* ScaleTransformViewOptions.Rotation3dOptions.swift */; };
-		2B963ABEF34BC94828412F5C9CF22B46 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20687829F012694ADD9146D3C8D98AD6 /* UIView+Utilities.swift */; };
+		1BE802D660F94D57E9173F34B932E68A /* SnapshotTransformViewOptions+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177E380300E0A8349E3702917A18546 /* SnapshotTransformViewOptions+Layout.swift */; };
+		1C466095C4A4ED6A81580D1FCF992328 /* CollectionViewPagingLayout.ZPositionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A656F9FD0B5DF6B4A8623CF2A4CCA9D /* CollectionViewPagingLayout.ZPositionHandler.swift */; };
+		218013760455E6FDDE1E1D0D08518D74 /* SnapshotContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D105AD93BE82AA2C9EB4785EB920E /* SnapshotContainerView.swift */; };
+		22F7462179A63BC3848E7EA84C99A354 /* ScaleTransformViewOptions+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77A3066EF1641ADA2557BF358B109F /* ScaleTransformViewOptions+Layout.swift */; };
+		2325B7D61C40B8FF368A9B9A2D64330E /* SnapshotTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C4BABDF54CBDD01DD3B8D2D494FAF3 /* SnapshotTransformView.swift */; };
+		25786284001B1BDB31B46F6DA09D9188 /* ScaleTransformViewOptions.Rotation3dOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AF3AD6C216DA95954D14FF8C63DD9 /* ScaleTransformViewOptions.Rotation3dOptions.swift */; };
+		2B963ABEF34BC94828412F5C9CF22B46 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DCD643FF856FF5BF7F1B34DE2B7A /* UIView+Utilities.swift */; };
 		2F45F666FE7E3A18B8FA07C4DDE4D929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		301A56337EB341EA50D0DFEC95ABAC91 /* ScaleTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F76FDE787269652FBD35A14D8B7FEE /* ScaleTransformView.swift */; };
-		42BDBD1BDDB9788CF5BFCAD644246C6F /* StackTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88124ADCD2A3CCB14CB1F254DBB381F7 /* StackTransformView.swift */; };
-		4D8E19C7E06E7951EEEB2DF67FD453E0 /* ScaleTransformViewOptions.Translation3dOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84A4342D12DAE139C0E1DECBD3753D3 /* ScaleTransformViewOptions.Translation3dOptions.swift */; };
-		524AE409A2FF60E6DB93ED1013C8F411 /* ScalePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53A7028B950DC8B8AC644B2E2FFF27 /* ScalePageView.swift */; };
-		52D93BAF0DAC0209E48F0A84D0AD3D09 /* CollectionViewPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45A850328352AF0925300DC93A5988 /* CollectionViewPagingLayout.swift */; };
-		5BC0749CDC63621F2FFA51F901E88A7F /* TransformPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46227C1B7643B3BC6B7578AE87F6B036 /* TransformPageView.swift */; };
-		60D917333A534FFCFB8E5ED081F566A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		7504D19829985ABD80444F078ACBA210 /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE743FB8134A6F6623494141B4E5E178 /* PagingCollectionViewCell.swift */; };
-		862982B3158E7BA00BC317C7B0E36F1C /* CollectionViewPagingLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6F34BE0EE71EC6907CD565E56FB519 /* CollectionViewPagingLayout-dummy.m */; };
-		8C29D7A2848A517C4745EDD89C9C63EE /* SnapshotTransformViewOptions.PiecesValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058F5DD21ED3B762EAD34C4FFF97EA5 /* SnapshotTransformViewOptions.PiecesValue.swift */; };
-		8FB037D8D4A446D804D3E1B715EA7554 /* PagingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E249FD54B1F021A16077AA7344EFC70 /* PagingCollectionViewController.swift */; };
-		95270D580CEAB17C4B67CEF7E3763629 /* Pods-GifticonMoad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B53F5878CF5AD20F37C22248AD281E9 /* Pods-GifticonMoad-dummy.m */; };
-		98A8FA2336C1FCE77CE6F44C5A94419A /* PagingCollectionViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D36F7197B1254C15DF89EBE8F8C2C /* PagingCollectionViewControllerBuilder.swift */; };
-		9B58075D62DDC6AA245D1D5A42DD848E /* TransformableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C96D62D1509E31A020D5DE0CC88C3A /* TransformableView.swift */; };
-		9C9C698CA21D28226210DC527FF1C92E /* CGFloat+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D06D1E548C548C20E9B1AF76BEBA5C /* CGFloat+Range.swift */; };
-		A02A10B3B1CD301155C927F5BB50A404 /* StackTransformViewOptions+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B1A0AA34385D1EEEAF596342534D6 /* StackTransformViewOptions+Layout.swift */; };
-		A2B906501E75769260308E03C5F5B06B /* StackTransformViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F90016709E8C2E3628E251BEABE58F3 /* StackTransformViewOptions.swift */; };
-		AC4D80C9C7456B332FE405E339EB1407 /* TransformPageViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAC2F47E00F5CAE97900034E72D678 /* TransformPageViewProtocol.swift */; };
-		B9D8561624B991C0EDA5401CB7D5B3FE /* SnapshotTransformViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284670508E417AF712361ADD39B4B45F /* SnapshotTransformViewOptions.swift */; };
-		BDFD53A6C2A9DFA13968BD014FD1DBC8 /* Multipliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21015B0E22BFD8780B6BC19A88DE0E1A /* Multipliable.swift */; };
-		BE0049FF330AF3E7A5A3C34B9014519C /* StackPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5034E95D3B89FF05950DE5C16F9D24 /* StackPageView.swift */; };
-		C12CF323B51CC0C8B85D2A6CE0C68851 /* ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C09A1B5F8419D2BD52855E4CFD3CA /* ViewAnimator.swift */; };
-		C19AE40117ADA2865C323E2660415AF2 /* Pods-GifticonMoad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 127C0CD71401A5D1F5103EB1A95DF896 /* Pods-GifticonMoad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA12E07E4569538FE93F3E3DFAB1D1EF /* PagingCollectionViewModifierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D5A9C7F715275B667B67CA2842C2B2 /* PagingCollectionViewModifierData.swift */; };
-		E3C40CF48D803D770136FEED2D3B18B2 /* SnapshotPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463AFCF29F86788AC98DB8B7692A9A0 /* SnapshotPageView.swift */; };
-		E4F3E4BDAB11D7D820B4107BA12C3E6D /* BlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466DDEC9F94B652E3DAD0D0CC1C981F /* BlurEffectView.swift */; };
-		ECEA214017043332DC56FD11ED88CEB9 /* ScaleTransformViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9CAC609A792F2EF5A6E1967DA8848 /* ScaleTransformViewOptions.swift */; };
-		ECF22E484721B7CAE06E617DFAB64F5E /* PagePadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2E401058DD161AC91192EEAFA01DC /* PagePadding.swift */; };
-		EFD34CA0C80553E5F3E529CB26B71916 /* CGFloat+Interpolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF62071A571EB611852E0421BE1808 /* CGFloat+Interpolate.swift */; };
-		FA10B2A3CA0463BA204A7B8792A31332 /* CollectionViewPagingLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA60DEFCE976960A6D39198053DDECF /* CollectionViewPagingLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301A56337EB341EA50D0DFEC95ABAC91 /* ScaleTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77D7805219F809C8D97CF7F25D4883 /* ScaleTransformView.swift */; };
+		42BDBD1BDDB9788CF5BFCAD644246C6F /* StackTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73C40508ADE955C85E96F1564579135 /* StackTransformView.swift */; };
+		4D8E19C7E06E7951EEEB2DF67FD453E0 /* ScaleTransformViewOptions.Translation3dOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8C15E2906D86CE0E2317A3B0EDC45 /* ScaleTransformViewOptions.Translation3dOptions.swift */; };
+		524AE409A2FF60E6DB93ED1013C8F411 /* ScalePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52B08EDFCED0315608A20B99A94487 /* ScalePageView.swift */; };
+		52D93BAF0DAC0209E48F0A84D0AD3D09 /* CollectionViewPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A82E953ECC3CA9DF9217BE8D61C5C54 /* CollectionViewPagingLayout.swift */; };
+		5AD6CFC2C469CCE544CDA62218396DB8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9832CCA283741446C0F45092D10EDB8F /* PrivacyInfo.xcprivacy */; };
+		5BC0749CDC63621F2FFA51F901E88A7F /* TransformPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399CE91D0B25AF0E232CABA0A47DC54C /* TransformPageView.swift */; };
+		7504D19829985ABD80444F078ACBA210 /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27073FFED62859D1148055BA7242317 /* PagingCollectionViewCell.swift */; };
+		77CD2EAF5C6E2EA640A7F56D05C021A8 /* Pods-GifticonMoad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C7A4F4EB0DAD58D0630889D50984D /* Pods-GifticonMoad-dummy.m */; };
+		84CAA9E1F317D215C52577CC242A9C16 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 217B907C17444E1E8630722290CE2D19 /* PrivacyInfo.xcprivacy */; };
+		85A8CC2B2C8A5C88DAAC9764FA37F5B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		862982B3158E7BA00BC317C7B0E36F1C /* CollectionViewPagingLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97903B136F63589E2D947BC8BAAAE5AD /* CollectionViewPagingLayout-dummy.m */; };
+		8C29D7A2848A517C4745EDD89C9C63EE /* SnapshotTransformViewOptions.PiecesValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F07E9126881EB4CB5C9395B61BD4F /* SnapshotTransformViewOptions.PiecesValue.swift */; };
+		8FB037D8D4A446D804D3E1B715EA7554 /* PagingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA1EE69B4F2DE01B45ACED6AB16B6C /* PagingCollectionViewController.swift */; };
+		98A8FA2336C1FCE77CE6F44C5A94419A /* PagingCollectionViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B886674D6C6131E06CCBE0D9EE84B08 /* PagingCollectionViewControllerBuilder.swift */; };
+		9B58075D62DDC6AA245D1D5A42DD848E /* TransformableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C364759945505B2DE26733C11DF2D8D6 /* TransformableView.swift */; };
+		9C9C698CA21D28226210DC527FF1C92E /* CGFloat+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC05D23E4628596408E8E68EC88A26 /* CGFloat+Range.swift */; };
+		A02A10B3B1CD301155C927F5BB50A404 /* StackTransformViewOptions+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD658BF68B631C146AAAE3D932093048 /* StackTransformViewOptions+Layout.swift */; };
+		A2B906501E75769260308E03C5F5B06B /* StackTransformViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882372B4324B279CF5900C848160F1F0 /* StackTransformViewOptions.swift */; };
+		AC4D80C9C7456B332FE405E339EB1407 /* TransformPageViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75636E0900C8B6F87EFE05B38934070 /* TransformPageViewProtocol.swift */; };
+		B9D8561624B991C0EDA5401CB7D5B3FE /* SnapshotTransformViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B825D6B51BBFD059BFC911EB0E7B17 /* SnapshotTransformViewOptions.swift */; };
+		BDFD53A6C2A9DFA13968BD014FD1DBC8 /* Multipliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0CB2AE37649619E9CDF0497C112B96 /* Multipliable.swift */; };
+		BE0049FF330AF3E7A5A3C34B9014519C /* StackPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BF1411234F1B20DE8149064A07731 /* StackPageView.swift */; };
+		C12CF323B51CC0C8B85D2A6CE0C68851 /* ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C10037D30F3DA06E759B2DBA2017C4 /* ViewAnimator.swift */; };
+		CA12E07E4569538FE93F3E3DFAB1D1EF /* PagingCollectionViewModifierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BA2541621350EFE2275A2232D0682 /* PagingCollectionViewModifierData.swift */; };
+		DA16462658AEFEB4EB9828E3D479D83B /* Pods-GifticonMoad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F65292C5794A713F5D96929E8E9BD11D /* Pods-GifticonMoad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3C40CF48D803D770136FEED2D3B18B2 /* SnapshotPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF9C2D8197FA39977CF6EE6F10BDC88 /* SnapshotPageView.swift */; };
+		E4F3E4BDAB11D7D820B4107BA12C3E6D /* BlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEF6BFA44B48E6A7309CC2ED295CEC /* BlurEffectView.swift */; };
+		ECEA214017043332DC56FD11ED88CEB9 /* ScaleTransformViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B840C68809712E3802817F0F270B17 /* ScaleTransformViewOptions.swift */; };
+		ECF22E484721B7CAE06E617DFAB64F5E /* PagePadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9DE1A44DFB4DA0D2F13A122DB6740 /* PagePadding.swift */; };
+		EFD34CA0C80553E5F3E529CB26B71916 /* CGFloat+Interpolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B21048115B7FA6221E94D731435C28 /* CGFloat+Interpolate.swift */; };
+		FA10B2A3CA0463BA204A7B8792A31332 /* CollectionViewPagingLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 512CF5AD7380F0745F00150824B8A40F /* CollectionViewPagingLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5BB8216F7C0B8C6CE6500127BDDE469F /* PBXContainerItemProxy */ = {
+		01B6E1DE0DC67CA24BCA0968EBF3F16F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A6330DB0D626881A7D4956ABC745EC85;
 			remoteInfo = CollectionViewPagingLayout;
 		};
+		48736FC0DAEB968747512119008D27E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
+			remoteInfo = GoogleUserMessagingPlatform;
+		};
+		499EA737F10ED80DC59FC97ACD3439A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63A7C675C13F87669AF56006D943998B;
+			remoteInfo = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
+		};
+		7CAAAE74AEB540D6D81613070886BE95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36FD0958A0EC4A0FCF599E9B22719B03;
+			remoteInfo = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources";
+		};
+		8B140D4DB654ECA7160EF6A8E34DE8F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEA3B3A570634836C0457F3D7CEF1699;
+			remoteInfo = "Google-Mobile-Ads-SDK";
+		};
+		EC9438815BAEFE9358556923257F7DDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
+			remoteInfo = GoogleUserMessagingPlatform;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		127C0CD71401A5D1F5103EB1A95DF896 /* Pods-GifticonMoad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GifticonMoad-umbrella.h"; sourceTree = "<group>"; };
-		1CAF62071A571EB611852E0421BE1808 /* CGFloat+Interpolate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+Interpolate.swift"; path = "Lib/Utilities/CGFloat+Interpolate.swift"; sourceTree = "<group>"; };
-		2058F5DD21ED3B762EAD34C4FFF97EA5 /* SnapshotTransformViewOptions.PiecesValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformViewOptions.PiecesValue.swift; path = Lib/Snapshot/SnapshotTransformViewOptions.PiecesValue.swift; sourceTree = "<group>"; };
-		20687829F012694ADD9146D3C8D98AD6 /* UIView+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Utilities.swift"; path = "Lib/Utilities/UIView+Utilities.swift"; sourceTree = "<group>"; };
-		21015B0E22BFD8780B6BC19A88DE0E1A /* Multipliable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multipliable.swift; path = Lib/Utilities/Multipliable.swift; sourceTree = "<group>"; };
-		284670508E417AF712361ADD39B4B45F /* SnapshotTransformViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformViewOptions.swift; path = Lib/Snapshot/SnapshotTransformViewOptions.swift; sourceTree = "<group>"; };
-		34F371053D5F5545DC4EC9BC064440BE /* ScaleTransformViewOptions+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ScaleTransformViewOptions+Layout.swift"; path = "Lib/Scale/ScaleTransformViewOptions+Layout.swift"; sourceTree = "<group>"; };
-		36AA852BA3E51D55569D64FC3CF20C5B /* Pods-GifticonMoad-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GifticonMoad-frameworks.sh"; sourceTree = "<group>"; };
-		3B53F5878CF5AD20F37C22248AD281E9 /* Pods-GifticonMoad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GifticonMoad-dummy.m"; sourceTree = "<group>"; };
-		3E249FD54B1F021A16077AA7344EFC70 /* PagingCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewController.swift; path = Lib/SwiftUI/PagingCollectionViewController.swift; sourceTree = "<group>"; };
-		4463AFCF29F86788AC98DB8B7692A9A0 /* SnapshotPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotPageView.swift; path = Lib/SwiftUI/SnapshotPageView.swift; sourceTree = "<group>"; };
-		46227C1B7643B3BC6B7578AE87F6B036 /* TransformPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformPageView.swift; path = Lib/SwiftUI/TransformPageView.swift; sourceTree = "<group>"; };
-		463D36F7197B1254C15DF89EBE8F8C2C /* PagingCollectionViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewControllerBuilder.swift; path = Lib/SwiftUI/PagingCollectionViewControllerBuilder.swift; sourceTree = "<group>"; };
-		465FFA3CBDE8ACCD95E6BCCDFA58652F /* SnapshotTransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformView.swift; path = Lib/Snapshot/SnapshotTransformView.swift; sourceTree = "<group>"; };
-		47D06D1E548C548C20E9B1AF76BEBA5C /* CGFloat+Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+Range.swift"; path = "Lib/Utilities/CGFloat+Range.swift"; sourceTree = "<group>"; };
-		48CC5A8161D06A0335D85C8791312AE3 /* SnapshotTransformViewOptions+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SnapshotTransformViewOptions+Layout.swift"; path = "Lib/Snapshot/SnapshotTransformViewOptions+Layout.swift"; sourceTree = "<group>"; };
-		48DD9720B36789913FDE5C690EBCB9AC /* Pods-GifticonMoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GifticonMoad.debug.xcconfig"; sourceTree = "<group>"; };
+		0A8AEA9027F29B1D982E484E27397D30 /* TransformCurve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformCurve.swift; path = Lib/TransformCurve.swift; sourceTree = "<group>"; };
+		0B886674D6C6131E06CCBE0D9EE84B08 /* PagingCollectionViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewControllerBuilder.swift; path = Lib/SwiftUI/PagingCollectionViewControllerBuilder.swift; sourceTree = "<group>"; };
+		1436F6D20A89B1D1573D12B5CEEB1E5B /* SnapshotTransformViewOptions.PiecePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformViewOptions.PiecePosition.swift; path = Lib/Snapshot/SnapshotTransformViewOptions.PiecePosition.swift; sourceTree = "<group>"; };
+		14B21291B6C2E08BE0374734097D975C /* Pods-GifticonMoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GifticonMoad.release.xcconfig"; sourceTree = "<group>"; };
+		2177E380300E0A8349E3702917A18546 /* SnapshotTransformViewOptions+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SnapshotTransformViewOptions+Layout.swift"; path = "Lib/Snapshot/SnapshotTransformViewOptions+Layout.swift"; sourceTree = "<group>"; };
+		217B907C17444E1E8630722290CE2D19 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "Frameworks/Release/UserMessagingPlatform.xcframework/ios-arm64/UserMessagingPlatform.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		3998091512768CD07733CB4F02B4BD9F /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources"; path = GoogleMobileAdsResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		399CE91D0B25AF0E232CABA0A47DC54C /* TransformPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformPageView.swift; path = Lib/SwiftUI/TransformPageView.swift; sourceTree = "<group>"; };
+		3AA9357C28A7F5D8526E5C83774ADF0F /* Google-Mobile-Ads-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		3C52B08EDFCED0315608A20B99A94487 /* ScalePageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalePageView.swift; path = Lib/SwiftUI/ScalePageView.swift; sourceTree = "<group>"; };
+		43ABBC0AB3A75944CB8261A5CB8B6F20 /* GoogleUserMessagingPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.release.xcconfig; sourceTree = "<group>"; };
+		43B21048115B7FA6221E94D731435C28 /* CGFloat+Interpolate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+Interpolate.swift"; path = "Lib/Utilities/CGFloat+Interpolate.swift"; sourceTree = "<group>"; };
+		4606BB5FF25ED0046BC6B33F96F05557 /* Pods-GifticonMoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GifticonMoad.debug.xcconfig"; sourceTree = "<group>"; };
+		4D0CB2AE37649619E9CDF0497C112B96 /* Multipliable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multipliable.swift; path = Lib/Utilities/Multipliable.swift; sourceTree = "<group>"; };
 		4D8F964FEA10FF4ED7C669359A356BC9 /* CollectionViewPagingLayout */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CollectionViewPagingLayout; path = CollectionViewPagingLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58F76FDE787269652FBD35A14D8B7FEE /* ScaleTransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformView.swift; path = Lib/Scale/ScaleTransformView.swift; sourceTree = "<group>"; };
-		58FE786B9881D44BDBC7CCFEC9956C2C /* Pods-GifticonMoad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GifticonMoad.modulemap"; sourceTree = "<group>"; };
-		59C71E8A9F2E31EF7A7C08BDF607E57C /* ScaleTransformViewOptions.Rotation3dOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformViewOptions.Rotation3dOptions.swift; path = Lib/Scale/ScaleTransformViewOptions.Rotation3dOptions.swift; sourceTree = "<group>"; };
-		5B5034E95D3B89FF05950DE5C16F9D24 /* StackPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackPageView.swift; path = Lib/SwiftUI/StackPageView.swift; sourceTree = "<group>"; };
-		5EA6221651A81487C79E659AEAED2D32 /* SnapshotContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotContainerView.swift; path = Lib/Snapshot/SnapshotContainerView.swift; sourceTree = "<group>"; };
-		5F864613D16E40326A6A31D8F9EB5992 /* Pods-GifticonMoad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GifticonMoad-Info.plist"; sourceTree = "<group>"; };
-		6411E72545D7A7CE53087F9DEAD460F4 /* CollectionViewPagingLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewPagingLayout.debug.xcconfig; sourceTree = "<group>"; };
-		65C09B810CF7A084CB76F5E61FC803C1 /* Pods-GifticonMoad-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GifticonMoad-acknowledgements.plist"; sourceTree = "<group>"; };
-		669C09A1B5F8419D2BD52855E4CFD3CA /* ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = Lib/ViewAnimator.swift; sourceTree = "<group>"; };
-		6B53A7028B950DC8B8AC644B2E2FFF27 /* ScalePageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalePageView.swift; path = Lib/SwiftUI/ScalePageView.swift; sourceTree = "<group>"; };
-		6F90016709E8C2E3628E251BEABE58F3 /* StackTransformViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackTransformViewOptions.swift; path = Lib/Stack/StackTransformViewOptions.swift; sourceTree = "<group>"; };
-		7047CDC8A6BF2017E2141A38A18DF5A1 /* SnapshotTransformViewOptions.PiecePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformViewOptions.PiecePosition.swift; path = Lib/Snapshot/SnapshotTransformViewOptions.PiecePosition.swift; sourceTree = "<group>"; };
-		8676937F45DDA7E1AFDDFEFE27097985 /* TransformCurve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformCurve.swift; path = Lib/TransformCurve.swift; sourceTree = "<group>"; };
-		88124ADCD2A3CCB14CB1F254DBB381F7 /* StackTransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackTransformView.swift; path = Lib/Stack/StackTransformView.swift; sourceTree = "<group>"; };
-		897F9C3D4C5EFA019B5B3937DCAAF557 /* CollectionViewPagingLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CollectionViewPagingLayout.modulemap; sourceTree = "<group>"; };
+		4FC8C15E2906D86CE0E2317A3B0EDC45 /* ScaleTransformViewOptions.Translation3dOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformViewOptions.Translation3dOptions.swift; path = Lib/Scale/ScaleTransformViewOptions.Translation3dOptions.swift; sourceTree = "<group>"; };
+		512CF5AD7380F0745F00150824B8A40F /* CollectionViewPagingLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewPagingLayout-umbrella.h"; sourceTree = "<group>"; };
+		51A7A0DC2140B064DAF58F4EFFD3F1EB /* CollectionViewPagingLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewPagingLayout.release.xcconfig; sourceTree = "<group>"; };
+		583CCD9641785D5923C10936B538F25B /* CollectionViewPagingLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewPagingLayout.debug.xcconfig; sourceTree = "<group>"; };
+		5A77D7805219F809C8D97CF7F25D4883 /* ScaleTransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformView.swift; path = Lib/Scale/ScaleTransformView.swift; sourceTree = "<group>"; };
+		5AD9DE1A44DFB4DA0D2F13A122DB6740 /* PagePadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagePadding.swift; path = Lib/SwiftUI/PagePadding.swift; sourceTree = "<group>"; };
+		5B3F869691823DB56A15C1971A8F1486 /* GoogleUserMessagingPlatform-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleUserMessagingPlatform-xcframeworks.sh"; sourceTree = "<group>"; };
+		62C4BABDF54CBDD01DD3B8D2D494FAF3 /* SnapshotTransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformView.swift; path = Lib/Snapshot/SnapshotTransformView.swift; sourceTree = "<group>"; };
+		641F76B96EABB8F0A87FE6F7897E88A9 /* Pods-GifticonMoad-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GifticonMoad-frameworks.sh"; sourceTree = "<group>"; };
+		682C3581624752044DA5F66C43C091C6 /* ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist"; sourceTree = "<group>"; };
+		6A656F9FD0B5DF6B4A8623CF2A4CCA9D /* CollectionViewPagingLayout.ZPositionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewPagingLayout.ZPositionHandler.swift; path = Lib/CollectionViewPagingLayout.ZPositionHandler.swift; sourceTree = "<group>"; };
+		6A82E953ECC3CA9DF9217BE8D61C5C54 /* CollectionViewPagingLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewPagingLayout.swift; path = Lib/CollectionViewPagingLayout.swift; sourceTree = "<group>"; };
+		6FAC980F816BE69ACBEDBB63D650F72E /* Google-Mobile-Ads-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Google-Mobile-Ads-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		702BA2541621350EFE2275A2232D0682 /* PagingCollectionViewModifierData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewModifierData.swift; path = Lib/SwiftUI/PagingCollectionViewModifierData.swift; sourceTree = "<group>"; };
+		75C10037D30F3DA06E759B2DBA2017C4 /* ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = Lib/ViewAnimator.swift; sourceTree = "<group>"; };
+		7C3B3E7400676888E91DEC2DA3EF918A /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = UserMessagingPlatform.xcframework; path = Frameworks/Release/UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		7C75CBE149AE29D7D2560EA4B0DDA1F4 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMobileAds.xcframework; path = Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		882372B4324B279CF5900C848160F1F0 /* StackTransformViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackTransformViewOptions.swift; path = Lib/Stack/StackTransformViewOptions.swift; sourceTree = "<group>"; };
+		88B825D6B51BBFD059BFC911EB0E7B17 /* SnapshotTransformViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformViewOptions.swift; path = Lib/Snapshot/SnapshotTransformViewOptions.swift; sourceTree = "<group>"; };
+		8A377C18F92A8A511869ADA54B5652D2 /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources"; path = UserMessagingPlatformResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AAA1EE69B4F2DE01B45ACED6AB16B6C /* PagingCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewController.swift; path = Lib/SwiftUI/PagingCollectionViewController.swift; sourceTree = "<group>"; };
+		8E72DCD643FF856FF5BF7F1B34DE2B7A /* UIView+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Utilities.swift"; path = "Lib/Utilities/UIView+Utilities.swift"; sourceTree = "<group>"; };
+		8F26AD1882BDA33CE80F477CC2CD25B6 /* Pods-GifticonMoad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GifticonMoad-Info.plist"; sourceTree = "<group>"; };
+		8F608A609B483E6CD5472D200F4AEB7A /* CollectionViewPagingLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CollectionViewPagingLayout-Info.plist"; sourceTree = "<group>"; };
+		97903B136F63589E2D947BC8BAAAE5AD /* CollectionViewPagingLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CollectionViewPagingLayout-dummy.m"; sourceTree = "<group>"; };
+		9832CCA283741446C0F45092D10EDB8F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework/ios-arm64/GoogleMobileAds.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DC9CAC609A792F2EF5A6E1967DA8848 /* ScaleTransformViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformViewOptions.swift; path = Lib/Scale/ScaleTransformViewOptions.swift; sourceTree = "<group>"; };
-		9E8B1A0AA34385D1EEEAF596342534D6 /* StackTransformViewOptions+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StackTransformViewOptions+Layout.swift"; path = "Lib/Stack/StackTransformViewOptions+Layout.swift"; sourceTree = "<group>"; };
-		A1AF9DD4EC3990360CD8234E1823E3CF /* Pods-GifticonMoad-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GifticonMoad-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A3507B8D91F088ECC5D6E991DBE1358D /* Pods-GifticonMoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GifticonMoad.release.xcconfig"; sourceTree = "<group>"; };
-		ADA60DEFCE976960A6D39198053DDECF /* CollectionViewPagingLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewPagingLayout-umbrella.h"; sourceTree = "<group>"; };
-		B1DAC2F47E00F5CAE97900034E72D678 /* TransformPageViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformPageViewProtocol.swift; path = Lib/SwiftUI/TransformPageViewProtocol.swift; sourceTree = "<group>"; };
-		BD6F34BE0EE71EC6907CD565E56FB519 /* CollectionViewPagingLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CollectionViewPagingLayout-dummy.m"; sourceTree = "<group>"; };
-		BFAC7B6DB7AF76CFD1ED5FC7FB1189C8 /* CollectionViewPagingLayout.ZPositionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewPagingLayout.ZPositionHandler.swift; path = Lib/CollectionViewPagingLayout.ZPositionHandler.swift; sourceTree = "<group>"; };
-		C5C96D62D1509E31A020D5DE0CC88C3A /* TransformableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformableView.swift; path = Lib/TransformableView.swift; sourceTree = "<group>"; };
-		CE743FB8134A6F6623494141B4E5E178 /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewCell.swift; path = Lib/SwiftUI/PagingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A13C7A4F4EB0DAD58D0630889D50984D /* Pods-GifticonMoad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GifticonMoad-dummy.m"; sourceTree = "<group>"; };
+		A27073FFED62859D1148055BA7242317 /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewCell.swift; path = Lib/SwiftUI/PagingCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADF9C2D8197FA39977CF6EE6F10BDC88 /* SnapshotPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotPageView.swift; path = Lib/SwiftUI/SnapshotPageView.swift; sourceTree = "<group>"; };
+		AEC03E7C10B76397D5EA8C5BFBD68006 /* ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist"; sourceTree = "<group>"; };
+		B0CEF6BFA44B48E6A7309CC2ED295CEC /* BlurEffectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurEffectView.swift; path = Lib/BlurEffectView.swift; sourceTree = "<group>"; };
+		BD0082E9838791CD20FCEEEAECEA121A /* Pods-GifticonMoad-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GifticonMoad-resources.sh"; sourceTree = "<group>"; };
+		BD658BF68B631C146AAAE3D932093048 /* StackTransformViewOptions+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StackTransformViewOptions+Layout.swift"; path = "Lib/Stack/StackTransformViewOptions+Layout.swift"; sourceTree = "<group>"; };
+		BF2AF3AD6C216DA95954D14FF8C63DD9 /* ScaleTransformViewOptions.Rotation3dOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformViewOptions.Rotation3dOptions.swift; path = Lib/Scale/ScaleTransformViewOptions.Rotation3dOptions.swift; sourceTree = "<group>"; };
+		C06BF1411234F1B20DE8149064A07731 /* StackPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackPageView.swift; path = Lib/SwiftUI/StackPageView.swift; sourceTree = "<group>"; };
+		C364759945505B2DE26733C11DF2D8D6 /* TransformableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformableView.swift; path = Lib/TransformableView.swift; sourceTree = "<group>"; };
+		C3DC05D23E4628596408E8E68EC88A26 /* CGFloat+Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+Range.swift"; path = "Lib/Utilities/CGFloat+Range.swift"; sourceTree = "<group>"; };
+		C75636E0900C8B6F87EFE05B38934070 /* TransformPageViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformPageViewProtocol.swift; path = Lib/SwiftUI/TransformPageViewProtocol.swift; sourceTree = "<group>"; };
+		CADD763A27DBC6F9C7C261AF2081D768 /* Google-Mobile-Ads-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		CC77A3066EF1641ADA2557BF358B109F /* ScaleTransformViewOptions+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ScaleTransformViewOptions+Layout.swift"; path = "Lib/Scale/ScaleTransformViewOptions+Layout.swift"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D32F07E9126881EB4CB5C9395B61BD4F /* SnapshotTransformViewOptions.PiecesValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTransformViewOptions.PiecesValue.swift; path = Lib/Snapshot/SnapshotTransformViewOptions.PiecesValue.swift; sourceTree = "<group>"; };
+		E076E93BD922E5E319D3E1B135B4B722 /* CollectionViewPagingLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewPagingLayout-prefix.pch"; sourceTree = "<group>"; };
 		E23358592C8C1419A216DDEEC03E7DC8 /* Pods-GifticonMoad */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GifticonMoad"; path = Pods_GifticonMoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2B3ADF9F4C0CA72D65DDE00F9CDA619 /* CollectionViewPagingLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewPagingLayout-prefix.pch"; sourceTree = "<group>"; };
-		E84A4342D12DAE139C0E1DECBD3753D3 /* ScaleTransformViewOptions.Translation3dOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformViewOptions.Translation3dOptions.swift; path = Lib/Scale/ScaleTransformViewOptions.Translation3dOptions.swift; sourceTree = "<group>"; };
+		E73C40508ADE955C85E96F1564579135 /* StackTransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackTransformView.swift; path = Lib/Stack/StackTransformView.swift; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EADA1B28C4B189A360E513F6E0126A17 /* CollectionViewPagingLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewPagingLayout.release.xcconfig; sourceTree = "<group>"; };
-		EB44F7988343DBA1B853D71D40466A29 /* CollectionViewPagingLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CollectionViewPagingLayout-Info.plist"; sourceTree = "<group>"; };
-		EF45A850328352AF0925300DC93A5988 /* CollectionViewPagingLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewPagingLayout.swift; path = Lib/CollectionViewPagingLayout.swift; sourceTree = "<group>"; };
-		EFB2E401058DD161AC91192EEAFA01DC /* PagePadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagePadding.swift; path = Lib/SwiftUI/PagePadding.swift; sourceTree = "<group>"; };
-		F2D5A9C7F715275B667B67CA2842C2B2 /* PagingCollectionViewModifierData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewModifierData.swift; path = Lib/SwiftUI/PagingCollectionViewModifierData.swift; sourceTree = "<group>"; };
-		F466DDEC9F94B652E3DAD0D0CC1C981F /* BlurEffectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurEffectView.swift; path = Lib/BlurEffectView.swift; sourceTree = "<group>"; };
+		EAB9A89A8166AD63D6CD5E14ADF50689 /* Pods-GifticonMoad-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GifticonMoad-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB1D105AD93BE82AA2C9EB4785EB920E /* SnapshotContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotContainerView.swift; path = Lib/Snapshot/SnapshotContainerView.swift; sourceTree = "<group>"; };
+		EDB5906294913B00BDDAB344CCAAFD11 /* CollectionViewPagingLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CollectionViewPagingLayout.modulemap; sourceTree = "<group>"; };
+		F4EC077557793C2E3D42DDB13050B292 /* GoogleUserMessagingPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.debug.xcconfig; sourceTree = "<group>"; };
+		F50716A042543FC65FA7E9825EA1210C /* Pods-GifticonMoad-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GifticonMoad-acknowledgements.plist"; sourceTree = "<group>"; };
+		F59D8D13A08149748D711B1A9D4F79B4 /* Pods-GifticonMoad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GifticonMoad.modulemap"; sourceTree = "<group>"; };
+		F65292C5794A713F5D96929E8E9BD11D /* Pods-GifticonMoad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GifticonMoad-umbrella.h"; sourceTree = "<group>"; };
+		F7B840C68809712E3802817F0F270B17 /* ScaleTransformViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleTransformViewOptions.swift; path = Lib/Scale/ScaleTransformViewOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8AC58C5DDE519B492411FD16C954433A /* Frameworks */ = {
+		1652C7D40784AFD60C2230179EF7BA63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D917333A534FFCFB8E5ED081F566A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19552FB95E279A1AD89B1E4567FC50A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85A8CC2B2C8A5C88DAAC9764FA37F5B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,30 +221,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACD423DE88DC63C58C923133B12B3380 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E5583D5E0981341AFF55341653DE70C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				897F9C3D4C5EFA019B5B3937DCAAF557 /* CollectionViewPagingLayout.modulemap */,
-				BD6F34BE0EE71EC6907CD565E56FB519 /* CollectionViewPagingLayout-dummy.m */,
-				EB44F7988343DBA1B853D71D40466A29 /* CollectionViewPagingLayout-Info.plist */,
-				E2B3ADF9F4C0CA72D65DDE00F9CDA619 /* CollectionViewPagingLayout-prefix.pch */,
-				ADA60DEFCE976960A6D39198053DDECF /* CollectionViewPagingLayout-umbrella.h */,
-				6411E72545D7A7CE53087F9DEAD460F4 /* CollectionViewPagingLayout.debug.xcconfig */,
-				EADA1B28C4B189A360E513F6E0126A17 /* CollectionViewPagingLayout.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CollectionViewPagingLayout";
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2564D86F155364611B8A344D5C8E7BCD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F869691823DB56A15C1971A8F1486 /* GoogleUserMessagingPlatform-xcframeworks.sh */,
+				F4EC077557793C2E3D42DDB13050B292 /* GoogleUserMessagingPlatform.debug.xcconfig */,
+				43ABBC0AB3A75944CB8261A5CB8B6F20 /* GoogleUserMessagingPlatform.release.xcconfig */,
+				682C3581624752044DA5F66C43C091C6 /* ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleUserMessagingPlatform";
+			sourceTree = "<group>";
+		};
+		28D5B7C0A49C382F6AF68F7EAB22535E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB5906294913B00BDDAB344CCAAFD11 /* CollectionViewPagingLayout.modulemap */,
+				97903B136F63589E2D947BC8BAAAE5AD /* CollectionViewPagingLayout-dummy.m */,
+				8F608A609B483E6CD5472D200F4AEB7A /* CollectionViewPagingLayout-Info.plist */,
+				E076E93BD922E5E319D3E1B135B4B722 /* CollectionViewPagingLayout-prefix.pch */,
+				512CF5AD7380F0745F00150824B8A40F /* CollectionViewPagingLayout-umbrella.h */,
+				583CCD9641785D5923C10936B538F25B /* CollectionViewPagingLayout.debug.xcconfig */,
+				51A7A0DC2140B064DAF58F4EFFD3F1EB /* CollectionViewPagingLayout.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CollectionViewPagingLayout";
+			sourceTree = "<group>";
+		};
+		2EE21AECEF27C25C60BAB8E59FA0E5C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				217B907C17444E1E8630722290CE2D19 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4073F5BB4AA2BE0EA3B13A338A6E0C0C /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				FAF68B8DED9434384DAC62DEAA6288CB /* Frameworks */,
+				EF3FE6E4801D78175651EC4301C1EFF9 /* Resources */,
+				F3849787742A08E86A00FDF5C14E9DFF /* Support Files */,
+			);
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
@@ -171,46 +294,105 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5A60521A60225711C90DC216333DD997 /* Targets Support Files */ = {
+		602B8C4433F6D81ACDA812D664F5AE9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				864DF2BDCAC467078814894705D991D7 /* Pods-GifticonMoad */,
+				4D8F964FEA10FF4ED7C669359A356BC9 /* CollectionViewPagingLayout */,
+				3998091512768CD07733CB4F02B4BD9F /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */,
+				8A377C18F92A8A511869ADA54B5652D2 /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */,
+				E23358592C8C1419A216DDEEC03E7DC8 /* Pods-GifticonMoad */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		864DF2BDCAC467078814894705D991D7 /* Pods-GifticonMoad */ = {
+		6D018F53D76135E91F110692558387BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58FE786B9881D44BDBC7CCFEC9956C2C /* Pods-GifticonMoad.modulemap */,
-				A1AF9DD4EC3990360CD8234E1823E3CF /* Pods-GifticonMoad-acknowledgements.markdown */,
-				65C09B810CF7A084CB76F5E61FC803C1 /* Pods-GifticonMoad-acknowledgements.plist */,
-				3B53F5878CF5AD20F37C22248AD281E9 /* Pods-GifticonMoad-dummy.m */,
-				36AA852BA3E51D55569D64FC3CF20C5B /* Pods-GifticonMoad-frameworks.sh */,
-				5F864613D16E40326A6A31D8F9EB5992 /* Pods-GifticonMoad-Info.plist */,
-				127C0CD71401A5D1F5103EB1A95DF896 /* Pods-GifticonMoad-umbrella.h */,
-				48DD9720B36789913FDE5C690EBCB9AC /* Pods-GifticonMoad.debug.xcconfig */,
-				A3507B8D91F088ECC5D6E991DBE1358D /* Pods-GifticonMoad.release.xcconfig */,
+				7C3B3E7400676888E91DEC2DA3EF918A /* UserMessagingPlatform.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EE9B984FAEE8E1FA5A602A5DBBDF0C1 /* GoogleUserMessagingPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				6D018F53D76135E91F110692558387BB /* Frameworks */,
+				2EE21AECEF27C25C60BAB8E59FA0E5C4 /* Resources */,
+				2564D86F155364611B8A344D5C8E7BCD /* Support Files */,
+			);
+			name = GoogleUserMessagingPlatform;
+			path = GoogleUserMessagingPlatform;
+			sourceTree = "<group>";
+		};
+		ADA68CC7BD5DB4C18F82D9F5EA128F74 /* Pods-GifticonMoad */ = {
+			isa = PBXGroup;
+			children = (
+				F59D8D13A08149748D711B1A9D4F79B4 /* Pods-GifticonMoad.modulemap */,
+				EAB9A89A8166AD63D6CD5E14ADF50689 /* Pods-GifticonMoad-acknowledgements.markdown */,
+				F50716A042543FC65FA7E9825EA1210C /* Pods-GifticonMoad-acknowledgements.plist */,
+				A13C7A4F4EB0DAD58D0630889D50984D /* Pods-GifticonMoad-dummy.m */,
+				641F76B96EABB8F0A87FE6F7897E88A9 /* Pods-GifticonMoad-frameworks.sh */,
+				8F26AD1882BDA33CE80F477CC2CD25B6 /* Pods-GifticonMoad-Info.plist */,
+				BD0082E9838791CD20FCEEEAECEA121A /* Pods-GifticonMoad-resources.sh */,
+				F65292C5794A713F5D96929E8E9BD11D /* Pods-GifticonMoad-umbrella.h */,
+				4606BB5FF25ED0046BC6B33F96F05557 /* Pods-GifticonMoad.debug.xcconfig */,
+				14B21291B6C2E08BE0374734097D975C /* Pods-GifticonMoad.release.xcconfig */,
 			);
 			name = "Pods-GifticonMoad";
 			path = "Target Support Files/Pods-GifticonMoad";
 			sourceTree = "<group>";
 		};
-		B08C69DD73B04A20C95ECD724571FB94 /* Pods */ = {
+		BC9579925B40485E011134440C8E1CA1 /* CollectionViewPagingLayout */ = {
 			isa = PBXGroup;
 			children = (
-				DC5CB5017BD7B873D813990DE6F083B9 /* CollectionViewPagingLayout */,
+				B0CEF6BFA44B48E6A7309CC2ED295CEC /* BlurEffectView.swift */,
+				43B21048115B7FA6221E94D731435C28 /* CGFloat+Interpolate.swift */,
+				C3DC05D23E4628596408E8E68EC88A26 /* CGFloat+Range.swift */,
+				6A82E953ECC3CA9DF9217BE8D61C5C54 /* CollectionViewPagingLayout.swift */,
+				6A656F9FD0B5DF6B4A8623CF2A4CCA9D /* CollectionViewPagingLayout.ZPositionHandler.swift */,
+				4D0CB2AE37649619E9CDF0497C112B96 /* Multipliable.swift */,
+				5AD9DE1A44DFB4DA0D2F13A122DB6740 /* PagePadding.swift */,
+				A27073FFED62859D1148055BA7242317 /* PagingCollectionViewCell.swift */,
+				8AAA1EE69B4F2DE01B45ACED6AB16B6C /* PagingCollectionViewController.swift */,
+				0B886674D6C6131E06CCBE0D9EE84B08 /* PagingCollectionViewControllerBuilder.swift */,
+				702BA2541621350EFE2275A2232D0682 /* PagingCollectionViewModifierData.swift */,
+				3C52B08EDFCED0315608A20B99A94487 /* ScalePageView.swift */,
+				5A77D7805219F809C8D97CF7F25D4883 /* ScaleTransformView.swift */,
+				F7B840C68809712E3802817F0F270B17 /* ScaleTransformViewOptions.swift */,
+				CC77A3066EF1641ADA2557BF358B109F /* ScaleTransformViewOptions+Layout.swift */,
+				BF2AF3AD6C216DA95954D14FF8C63DD9 /* ScaleTransformViewOptions.Rotation3dOptions.swift */,
+				4FC8C15E2906D86CE0E2317A3B0EDC45 /* ScaleTransformViewOptions.Translation3dOptions.swift */,
+				EB1D105AD93BE82AA2C9EB4785EB920E /* SnapshotContainerView.swift */,
+				ADF9C2D8197FA39977CF6EE6F10BDC88 /* SnapshotPageView.swift */,
+				62C4BABDF54CBDD01DD3B8D2D494FAF3 /* SnapshotTransformView.swift */,
+				88B825D6B51BBFD059BFC911EB0E7B17 /* SnapshotTransformViewOptions.swift */,
+				2177E380300E0A8349E3702917A18546 /* SnapshotTransformViewOptions+Layout.swift */,
+				1436F6D20A89B1D1573D12B5CEEB1E5B /* SnapshotTransformViewOptions.PiecePosition.swift */,
+				D32F07E9126881EB4CB5C9395B61BD4F /* SnapshotTransformViewOptions.PiecesValue.swift */,
+				C06BF1411234F1B20DE8149064A07731 /* StackPageView.swift */,
+				E73C40508ADE955C85E96F1564579135 /* StackTransformView.swift */,
+				882372B4324B279CF5900C848160F1F0 /* StackTransformViewOptions.swift */,
+				BD658BF68B631C146AAAE3D932093048 /* StackTransformViewOptions+Layout.swift */,
+				C364759945505B2DE26733C11DF2D8D6 /* TransformableView.swift */,
+				0A8AEA9027F29B1D982E484E27397D30 /* TransformCurve.swift */,
+				399CE91D0B25AF0E232CABA0A47DC54C /* TransformPageView.swift */,
+				C75636E0900C8B6F87EFE05B38934070 /* TransformPageViewProtocol.swift */,
+				8E72DCD643FF856FF5BF7F1B34DE2B7A /* UIView+Utilities.swift */,
+				75C10037D30F3DA06E759B2DBA2017C4 /* ViewAnimator.swift */,
+				28D5B7C0A49C382F6AF68F7EAB22535E /* Support Files */,
 			);
-			name = Pods;
+			name = CollectionViewPagingLayout;
+			path = CollectionViewPagingLayout;
 			sourceTree = "<group>";
 		};
-		CA471322789D3F9831E1C9DF6B7061C7 /* Products */ = {
+		BED09AC39103905AE713F5C5A2921280 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D8F964FEA10FF4ED7C669359A356BC9 /* CollectionViewPagingLayout */,
-				E23358592C8C1419A216DDEEC03E7DC8 /* Pods-GifticonMoad */,
+				BC9579925B40485E011134440C8E1CA1 /* CollectionViewPagingLayout */,
+				4073F5BB4AA2BE0EA3B13A338A6E0C0C /* Google-Mobile-Ads-SDK */,
+				9EE9B984FAEE8E1FA5A602A5DBBDF0C1 /* GoogleUserMessagingPlatform */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -218,53 +400,46 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				B08C69DD73B04A20C95ECD724571FB94 /* Pods */,
-				CA471322789D3F9831E1C9DF6B7061C7 /* Products */,
-				5A60521A60225711C90DC216333DD997 /* Targets Support Files */,
+				BED09AC39103905AE713F5C5A2921280 /* Pods */,
+				602B8C4433F6D81ACDA812D664F5AE9F /* Products */,
+				F1CE77D53BEBE7DA0FDFC079AFF0E927 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DC5CB5017BD7B873D813990DE6F083B9 /* CollectionViewPagingLayout */ = {
+		EF3FE6E4801D78175651EC4301C1EFF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F466DDEC9F94B652E3DAD0D0CC1C981F /* BlurEffectView.swift */,
-				1CAF62071A571EB611852E0421BE1808 /* CGFloat+Interpolate.swift */,
-				47D06D1E548C548C20E9B1AF76BEBA5C /* CGFloat+Range.swift */,
-				EF45A850328352AF0925300DC93A5988 /* CollectionViewPagingLayout.swift */,
-				BFAC7B6DB7AF76CFD1ED5FC7FB1189C8 /* CollectionViewPagingLayout.ZPositionHandler.swift */,
-				21015B0E22BFD8780B6BC19A88DE0E1A /* Multipliable.swift */,
-				EFB2E401058DD161AC91192EEAFA01DC /* PagePadding.swift */,
-				CE743FB8134A6F6623494141B4E5E178 /* PagingCollectionViewCell.swift */,
-				3E249FD54B1F021A16077AA7344EFC70 /* PagingCollectionViewController.swift */,
-				463D36F7197B1254C15DF89EBE8F8C2C /* PagingCollectionViewControllerBuilder.swift */,
-				F2D5A9C7F715275B667B67CA2842C2B2 /* PagingCollectionViewModifierData.swift */,
-				6B53A7028B950DC8B8AC644B2E2FFF27 /* ScalePageView.swift */,
-				58F76FDE787269652FBD35A14D8B7FEE /* ScaleTransformView.swift */,
-				9DC9CAC609A792F2EF5A6E1967DA8848 /* ScaleTransformViewOptions.swift */,
-				34F371053D5F5545DC4EC9BC064440BE /* ScaleTransformViewOptions+Layout.swift */,
-				59C71E8A9F2E31EF7A7C08BDF607E57C /* ScaleTransformViewOptions.Rotation3dOptions.swift */,
-				E84A4342D12DAE139C0E1DECBD3753D3 /* ScaleTransformViewOptions.Translation3dOptions.swift */,
-				5EA6221651A81487C79E659AEAED2D32 /* SnapshotContainerView.swift */,
-				4463AFCF29F86788AC98DB8B7692A9A0 /* SnapshotPageView.swift */,
-				465FFA3CBDE8ACCD95E6BCCDFA58652F /* SnapshotTransformView.swift */,
-				284670508E417AF712361ADD39B4B45F /* SnapshotTransformViewOptions.swift */,
-				48CC5A8161D06A0335D85C8791312AE3 /* SnapshotTransformViewOptions+Layout.swift */,
-				7047CDC8A6BF2017E2141A38A18DF5A1 /* SnapshotTransformViewOptions.PiecePosition.swift */,
-				2058F5DD21ED3B762EAD34C4FFF97EA5 /* SnapshotTransformViewOptions.PiecesValue.swift */,
-				5B5034E95D3B89FF05950DE5C16F9D24 /* StackPageView.swift */,
-				88124ADCD2A3CCB14CB1F254DBB381F7 /* StackTransformView.swift */,
-				6F90016709E8C2E3628E251BEABE58F3 /* StackTransformViewOptions.swift */,
-				9E8B1A0AA34385D1EEEAF596342534D6 /* StackTransformViewOptions+Layout.swift */,
-				C5C96D62D1509E31A020D5DE0CC88C3A /* TransformableView.swift */,
-				8676937F45DDA7E1AFDDFEFE27097985 /* TransformCurve.swift */,
-				46227C1B7643B3BC6B7578AE87F6B036 /* TransformPageView.swift */,
-				B1DAC2F47E00F5CAE97900034E72D678 /* TransformPageViewProtocol.swift */,
-				20687829F012694ADD9146D3C8D98AD6 /* UIView+Utilities.swift */,
-				669C09A1B5F8419D2BD52855E4CFD3CA /* ViewAnimator.swift */,
-				0E5583D5E0981341AFF55341653DE70C /* Support Files */,
+				9832CCA283741446C0F45092D10EDB8F /* PrivacyInfo.xcprivacy */,
 			);
-			name = CollectionViewPagingLayout;
-			path = CollectionViewPagingLayout;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F1CE77D53BEBE7DA0FDFC079AFF0E927 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA68CC7BD5DB4C18F82D9F5EA128F74 /* Pods-GifticonMoad */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F3849787742A08E86A00FDF5C14E9DFF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FAC980F816BE69ACBEDBB63D650F72E /* Google-Mobile-Ads-SDK-xcframeworks.sh */,
+				3AA9357C28A7F5D8526E5C83774ADF0F /* Google-Mobile-Ads-SDK.debug.xcconfig */,
+				CADD763A27DBC6F9C7C261AF2081D768 /* Google-Mobile-Ads-SDK.release.xcconfig */,
+				AEC03E7C10B76397D5EA8C5BFBD68006 /* ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		FAF68B8DED9434384DAC62DEAA6288CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C75CBE149AE29D7D2560EA4B0DDA1F4 /* GoogleMobileAds.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,35 +453,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A671D7EE708BD5C4B5738A1A15994FA7 /* Headers */ = {
+		AECE5F909212458AD3FAAE25001B9B8A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C19AE40117ADA2865C323E2660415AF2 /* Pods-GifticonMoad-umbrella.h in Headers */,
+				DA16462658AEFEB4EB9828E3D479D83B /* Pods-GifticonMoad-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		41285B1062A5641E3F1CF161C3CAD8B8 /* Pods-GifticonMoad */ = {
+		36FD0958A0EC4A0FCF599E9B22719B03 /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0EB1F4CC9354B13D9C6DA5057674015 /* Build configuration list for PBXNativeTarget "Pods-GifticonMoad" */;
+			buildConfigurationList = 611C614AF9447ACCE1DD34FB4D9BBCEA /* Build configuration list for PBXNativeTarget "Google-Mobile-Ads-SDK-GoogleMobileAdsResources" */;
 			buildPhases = (
-				A671D7EE708BD5C4B5738A1A15994FA7 /* Headers */,
-				5AE3941239A13615B0B82914C61F0949 /* Sources */,
-				8AC58C5DDE519B492411FD16C954433A /* Frameworks */,
-				865F32B81E1A7380BEA6F0EEA2A426DA /* Resources */,
+				A234210790CAD5930C3FD091D3BC665E /* Sources */,
+				1652C7D40784AFD60C2230179EF7BA63 /* Frameworks */,
+				9F510F455316E48DF786648C038C8871 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE2435DE6547BBE240667B82E5401FE1 /* PBXTargetDependency */,
+			);
+			name = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources";
+			productName = GoogleMobileAdsResources;
+			productReference = 3998091512768CD07733CB4F02B4BD9F /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */;
+			productType = "com.apple.product-type.bundle";
+		};
+		41285B1062A5641E3F1CF161C3CAD8B8 /* Pods-GifticonMoad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DDECE2C63E6A9CB393C62A67CBC4350 /* Build configuration list for PBXNativeTarget "Pods-GifticonMoad" */;
+			buildPhases = (
+				AECE5F909212458AD3FAAE25001B9B8A /* Headers */,
+				71FFFA3CCE94860A53FBA605F27CDCE2 /* Sources */,
+				19552FB95E279A1AD89B1E4567FC50A3 /* Frameworks */,
+				57C1D6E3332A6F1521A1579847DB2B48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C26F8117337A7B175797023E20318831 /* PBXTargetDependency */,
+				F7B76F583FB1662FE90F01CAB0F92BA3 /* PBXTargetDependency */,
+				4CF45E404A99BE2F30143887699EE9C6 /* PBXTargetDependency */,
 			);
 			name = "Pods-GifticonMoad";
 			productName = Pods_GifticonMoad;
 			productReference = E23358592C8C1419A216DDEEC03E7DC8 /* Pods-GifticonMoad */;
 			productType = "com.apple.product-type.framework";
+		};
+		63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F360CB913084A763410E9ECAF9B7DC5 /* Build configuration list for PBXNativeTarget "GoogleUserMessagingPlatform-UserMessagingPlatformResources" */;
+			buildPhases = (
+				181156A53837977CE88B57026BEB8F5D /* Sources */,
+				ACD423DE88DC63C58C923133B12B3380 /* Frameworks */,
+				14D98008173DF3B50BF3C0609DDB3E62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
+			productName = UserMessagingPlatformResources;
+			productReference = 8A377C18F92A8A511869ADA54B5652D2 /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */;
+			productType = "com.apple.product-type.bundle";
 		};
 		A6330DB0D626881A7D4956ABC745EC85 /* CollectionViewPagingLayout */ = {
 			isa = PBXNativeTarget;
@@ -332,8 +543,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -344,17 +555,29 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CA471322789D3F9831E1C9DF6B7061C7 /* Products */;
+			productRefGroup = 602B8C4433F6D81ACDA812D664F5AE9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A6330DB0D626881A7D4956ABC745EC85 /* CollectionViewPagingLayout */,
+				FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */,
+				36FD0958A0EC4A0FCF599E9B22719B03 /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */,
+				458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */,
+				63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */,
 				41285B1062A5641E3F1CF161C3CAD8B8 /* Pods-GifticonMoad */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		14D98008173DF3B50BF3C0609DDB3E62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CAA9E1F317D215C52577CC242A9C16 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14F8F632CFBF038C50694B997CD2F893 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,21 +585,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		865F32B81E1A7380BEA6F0EEA2A426DA /* Resources */ = {
+		57C1D6E3332A6F1521A1579847DB2B48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F510F455316E48DF786648C038C8871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD6CFC2C469CCE544CDA62218396DB8 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75663638A637BADFB02A9B361E929C1F /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5879B1A146D320B75202C70537BC4A4 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		5AE3941239A13615B0B82914C61F0949 /* Sources */ = {
+		181156A53837977CE88B57026BEB8F5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95270D580CEAB17C4B67CEF7E3763629 /* Pods-GifticonMoad-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,21 +689,173 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71FFFA3CCE94860A53FBA605F27CDCE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77CD2EAF5C6E2EA640A7F56D05C021A8 /* Pods-GifticonMoad-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A234210790CAD5930C3FD091D3BC665E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DE2435DE6547BBE240667B82E5401FE1 /* PBXTargetDependency */ = {
+		32135700754A1B1E46DE9CA071C62414 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
+			target = 63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */;
+			targetProxy = 499EA737F10ED80DC59FC97ACD3439A0 /* PBXContainerItemProxy */;
+		};
+		4CF45E404A99BE2F30143887699EE9C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUserMessagingPlatform;
+			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
+			targetProxy = 48736FC0DAEB968747512119008D27E1 /* PBXContainerItemProxy */;
+		};
+		6AB342AED7E909980DE2C33307952C9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources";
+			target = 36FD0958A0EC4A0FCF599E9B22719B03 /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */;
+			targetProxy = 7CAAAE74AEB540D6D81613070886BE95 /* PBXContainerItemProxy */;
+		};
+		C26F8117337A7B175797023E20318831 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CollectionViewPagingLayout;
 			target = A6330DB0D626881A7D4956ABC745EC85 /* CollectionViewPagingLayout */;
-			targetProxy = 5BB8216F7C0B8C6CE6500127BDDE469F /* PBXContainerItemProxy */;
+			targetProxy = 01B6E1DE0DC67CA24BCA0968EBF3F16F /* PBXContainerItemProxy */;
+		};
+		D1DE62BA5518253590D9F171D204F701 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUserMessagingPlatform;
+			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
+			targetProxy = EC9438815BAEFE9358556923257F7DDE /* PBXContainerItemProxy */;
+		};
+		F7B76F583FB1662FE90F01CAB0F92BA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Google-Mobile-Ads-SDK";
+			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
+			targetProxy = 8B140D4DB654ECA7160EF6A8E34DE8F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		06F17B5EB2830AA07756D03FCBB7B3BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43ABBC0AB3A75944CB8261A5CB8B6F20 /* GoogleUserMessagingPlatform.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07794809D5E92AEF7A27292290470181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CADD763A27DBC6F9C7C261AF2081D768 /* Google-Mobile-Ads-SDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15FC3FC51702ACC00437C4ED9E226C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4606BB5FF25ED0046BC6B33F96F05557 /* Pods-GifticonMoad.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		18E6DF7BA404EE1E48DAB7623C891E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA9357C28A7F5D8526E5C83774ADF0F /* Google-Mobile-Ads-SDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Google-Mobile-Ads-SDK";
+				IBSC_MODULE = Google_Mobile_Ads_SDK;
+				INFOPLIST_FILE = "Target Support Files/Google-Mobile-Ads-SDK/ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = GoogleMobileAdsResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		380D31599E020C9786A492A57E934EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4EC077557793C2E3D42DDB13050B292 /* GoogleUserMessagingPlatform.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		43233B80184A53EA6775DF8E4BB0FB7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6411E72545D7A7CE53087F9DEAD460F4 /* CollectionViewPagingLayout.debug.xcconfig */;
+			baseConfigurationReference = 583CCD9641785D5923C10936B538F25B /* CollectionViewPagingLayout.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -537,7 +956,7 @@
 		};
 		50CFBA03A60D509AFC7719A20E801481 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADA1B28C4B189A360E513F6E0126A17 /* CollectionViewPagingLayout.release.xcconfig */;
+			baseConfigurationReference = 51A7A0DC2140B064DAF58F4EFFD3F1EB /* CollectionViewPagingLayout.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -568,6 +987,23 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FCD55E3F952C1D653DE361B56688EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43ABBC0AB3A75944CB8261A5CB8B6F20 /* GoogleUserMessagingPlatform.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleUserMessagingPlatform";
+				IBSC_MODULE = GoogleUserMessagingPlatform;
+				INFOPLIST_FILE = "Target Support Files/GoogleUserMessagingPlatform/ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = UserMessagingPlatformResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -633,9 +1069,9 @@
 			};
 			name = Release;
 		};
-		B816B131A8962907A3243BF56A2D3DA1 /* Release */ = {
+		AF2C1BB245FF27287EFB7D28F1D5907A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3507B8D91F088ECC5D6E991DBE1358D /* Pods-GifticonMoad.release.xcconfig */;
+			baseConfigurationReference = 14B21291B6C2E08BE0374734097D975C /* Pods-GifticonMoad.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -671,42 +1107,56 @@
 			};
 			name = Release;
 		};
-		F733AD309F9AE61ADAFA56CD5C68DAD9 /* Debug */ = {
+		AFC2A3074AFDEA094187DD0C92DA6600 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48DD9720B36789913FDE5C690EBCB9AC /* Pods-GifticonMoad.debug.xcconfig */;
+			baseConfigurationReference = 3AA9357C28A7F5D8526E5C83774ADF0F /* Google-Mobile-Ads-SDK.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B19EB56B8E4262867B67BB6B98462508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4EC077557793C2E3D42DDB13050B292 /* GoogleUserMessagingPlatform.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleUserMessagingPlatform";
+				IBSC_MODULE = GoogleUserMessagingPlatform;
+				INFOPLIST_FILE = "Target Support Files/GoogleUserMessagingPlatform/ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = UserMessagingPlatformResources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
+		};
+		C2526D4B2B4C1042DC787D3E132F1BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CADD763A27DBC6F9C7C261AF2081D768 /* Google-Mobile-Ads-SDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Google-Mobile-Ads-SDK";
+				IBSC_MODULE = Google_Mobile_Ads_SDK;
+				INFOPLIST_FILE = "Target Support Files/Google-Mobile-Ads-SDK/ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = GoogleMobileAdsResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -720,20 +1170,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		49E5C1AF039CD15DFFA8FD712BECEFEB /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380D31599E020C9786A492A57E934EAB /* Debug */,
+				06F17B5EB2830AA07756D03FCBB7B3BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFA28686097D4D6A9DD552442DAD3BE /* Build configuration list for PBXAggregateTarget "Google-Mobile-Ads-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC2A3074AFDEA094187DD0C92DA6600 /* Debug */,
+				07794809D5E92AEF7A27292290470181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		611C614AF9447ACCE1DD34FB4D9BBCEA /* Build configuration list for PBXNativeTarget "Google-Mobile-Ads-SDK-GoogleMobileAdsResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E6DF7BA404EE1E48DAB7623C891E18 /* Debug */,
+				C2526D4B2B4C1042DC787D3E132F1BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DDECE2C63E6A9CB393C62A67CBC4350 /* Build configuration list for PBXNativeTarget "Pods-GifticonMoad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FC3FC51702ACC00437C4ED9E226C97 /* Debug */,
+				AF2C1BB245FF27287EFB7D28F1D5907A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F360CB913084A763410E9ECAF9B7DC5 /* Build configuration list for PBXNativeTarget "GoogleUserMessagingPlatform-UserMessagingPlatformResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B19EB56B8E4262867B67BB6B98462508 /* Debug */,
+				5FCD55E3F952C1D653DE361B56688EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CBD4C08062E1CAAB70454E6552952914 /* Build configuration list for PBXNativeTarget "CollectionViewPagingLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43233B80184A53EA6775DF8E4BB0FB7D /* Debug */,
 				50CFBA03A60D509AFC7719A20E801481 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0EB1F4CC9354B13D9C6DA5057674015 /* Build configuration list for PBXNativeTarget "Pods-GifticonMoad" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F733AD309F9AE61ADAFA56CD5C68DAD9 /* Debug */,
-				B816B131A8962907A3243BF56A2D3DA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

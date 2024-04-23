@@ -14,7 +14,7 @@ protocol AddGifticonViewControllerDelegate: AnyObject {
 }
 
 class AddGifticonViewController: UIViewController {
-    
+        
     weak var delegate : AddGifticonViewControllerDelegate?
     
     @IBOutlet var addImageBtn: UIButton!
@@ -169,7 +169,6 @@ class AddGifticonViewController: UIViewController {
     
     
     @IBAction func backAddingView(_ sender: Any) {
-        
         self.dismiss(animated: true)
     }
     
@@ -312,7 +311,6 @@ class AddGifticonViewController: UIViewController {
     }
     
 }
-
 
 
 extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

@@ -9,8 +9,13 @@ import UIKit
 import Foundation
 import CoreData
 import UserNotifications
+import GoogleMobileAds
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, GADFullScreenContentDelegate {
+    
+    private var rewardedAd: GADRewardedAd?
+    
+    var defaults : Int = 0
     
     // coreData가 선언되어 있는 AppDelegate를 가져와서 사용할 수 있도록 해줌
     let appdelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,6 +28,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // 기프티콘상태 버튼 변경 확인용 변수
     var usingStatus : Bool = true
+    
+    var gifticonCount : Int = 0
     
     let imageView : UIImageView = {
         let iv = UIImageView()
@@ -46,6 +53,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var gifticonStatus : Bool = true
     
     var ImageArray = [UIImage(systemName: "globe.central.south.asia.fill"), UIImage(systemName: "sunrise"), UIImage(systemName: "cloud.sleet")]
+
     
     func gifticonStatusParsing() {
         self.gifticonEnable = gifticonList.filter{ $0.status == true }
@@ -68,8 +76,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadRewardedAd()
+        defaults = UserDefaults.standard.integer(forKey: "gifticonCount")
+
         fetchGifticonData()
         gifticonStatusParsing()
+        
+        
         
         let collection = self.collectionIamgeView.collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -139,6 +152,46 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func addGifiton(_ sender: Any) {
         
+//        // 기존에 생성된 기프티콘 개수가 5이상일 때
+//        if self.gifticonCount >= 5 {
+//            let alert = UIAlertController(title: "기프티콘 개수 초과", message: "추가로 기프티콘을 생성을 위해 광고를 시청하시겠습니까?", preferredStyle: .alert)
+//            let yes = UIAlertAction(title: "Yes", style: .default, handler: {[self]_ in
+//                    rewardHelper.showRewardedAd(
+//                        viewController: self,
+//                        complition: {
+//                            print("컴플리션 실행됨")
+//                            let storyboard = UIStoryboard.init(name: "AddGifticon", bundle: nil)
+//                            
+//                            guard let addGifticonVC = storyboard.instantiateViewController(withIdentifier: "AddGifticonViewController") as? AddGifticonViewController else { return }
+//                            
+//                            addGifticonVC.modalPresentationStyle = .fullScreen
+//                            // 아래 delegate 연결을 해놔야 AddGifticonViewControllerDelegate로 호출 가능
+//                            addGifticonVC.delegate = self
+//                            
+//                            self.present(addGifticonVC, animated: true)
+//                        }
+//                    )
+//            })
+//            let no = UIAlertAction(title: "No", style: .destructive, handler: nil)
+//            alert.addAction(no)
+//            alert.addAction(yes)
+//            present(alert, animated: true, completion: nil)
+//            
+//        }
+        
+        if self.gifticonCount >= 5 {
+            
+            let alert = UIAlertController(title: "기프티콘 개수 초과", message: "추가로 기프티콘을 생성을 위해 광고를 시청하시겠습니까?", preferredStyle: .alert)
+            let yes = UIAlertAction(title: "Yes", style: .default, handler: {[self]_ in
+                showRewardedAd(
+                        viewController: self)
+            })
+            let no = UIAlertAction(title: "No", style: .destructive, handler: nil)
+            alert.addAction(no)
+            alert.addAction(yes)
+            present(alert, animated: true, completion: nil)
+        }
+
         let storyboard = UIStoryboard.init(name: "AddGifticon", bundle: nil)
         
         guard let addGifticonVC = storyboard.instantiateViewController(withIdentifier: "AddGifticonViewController") as? AddGifticonViewController else { return }
@@ -148,6 +201,45 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         addGifticonVC.delegate = self
         
         self.present(addGifticonVC, animated: true)
+    }
+    
+    func loadRewardedAd() {
+        let request = GADRequest()
+        GADRewardedAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1712485313", request: request) { [self] ad, error in
+            if let error = error {
+                print("Failed to load reward ad with error: \(error.localizedDescription)")
+                return
+            }
+            
+            rewardedAd = ad
+            rewardedAd?.fullScreenContentDelegate = self
+            print(#function, "Rewarded loaded")
+        }
+    }
+    
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        loadRewardedAd()
+        let storyboard = UIStoryboard.init(name: "AddGifticon", bundle: nil)
+        
+        guard let addGifticonVC = storyboard.instantiateViewController(withIdentifier: "AddGifticonViewController") as? AddGifticonViewController else { return }
+        
+        addGifticonVC.modalPresentationStyle = .fullScreen
+        // 아래 delegate 연결을 해놔야 AddGifticonViewControllerDelegate로 호출 가능
+        addGifticonVC.delegate = self
+        
+        self.present(addGifticonVC, animated: true)
+    }
+    
+    func showRewardedAd(viewController: UIViewController) {
+        print("Rewarded 수행됨")
+        if rewardedAd != nil {
+            rewardedAd!.present(fromRootViewController: viewController, userDidEarnRewardHandler: {
+                let reward = self.rewardedAd!.adReward
+                print("\(reward.amount) \(reward.type)")
+            })
+        } else {
+            print("RewardedAd wasn't ready")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -200,12 +292,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let collectionCellWidth = cell.gifticonInfo.frame.width
         
-        print("width : \(cell.gifticonIamge.frame.size.width)")
+        // 광고 생성을 위한 기프티콘 개수 확인
+        self.gifticonCount = enableGifticon.count
         
         if self.usingStatus {
             
             // TODO: collection 1개 있을 때 가운데 정렬 실기기 확인 필요
-            
             if enableGifticon.count == 1 {
                 
                 print("collectionviewWidth: \(collectionviewWidth) collectionCellWidth : \(collectionCellWidth)")

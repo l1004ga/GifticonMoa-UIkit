@@ -23,5 +23,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-2324657202204873~2826962320</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string></string>
 </dict>
 </plist>
