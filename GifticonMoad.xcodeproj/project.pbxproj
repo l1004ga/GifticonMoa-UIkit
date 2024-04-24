@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C351F4C2BD77099005BE3B8 /* RewardedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C351F4B2BD77099005BE3B8 /* RewardedHelper.swift */; };
 		727F136BA58F96AE30CF4D93 /* Pods_GifticonMoad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADBE476FA4495B30E865641 /* Pods_GifticonMoad.framework */; };
 		D708C7872A1B6EBF0063CBF0 /* AddGifticon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D708C7862A1B6EBF0063CBF0 /* AddGifticon.storyboard */; };
 		D708C7892A1B6ED30063CBF0 /* AddGifticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708C7882A1B6ED30063CBF0 /* AddGifticonViewController.swift */; };
@@ -42,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C351F4B2BD77099005BE3B8 /* RewardedHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedHelper.swift; sourceTree = "<group>"; };
 		62E37E088E30712449382D97 /* Pods-GifticonMoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifticonMoad.release.xcconfig"; path = "Target Support Files/Pods-GifticonMoad/Pods-GifticonMoad.release.xcconfig"; sourceTree = "<group>"; };
 		AADBE476FA4495B30E865641 /* Pods_GifticonMoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifticonMoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D708C7862A1B6EBF0063CBF0 /* AddGifticon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddGifticon.storyboard; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				D7584DFC2A14B82E00B29D68 /* LaunchScreen.storyboard */,
 				D7584DFF2A14B82E00B29D68 /* Info.plist */,
 				D7584DF72A14B82D00B29D68 /* GifticonMoad.xcdatamodeld */,
-				3C351F4B2BD77099005BE3B8 /* RewardedHelper.swift */,
 			);
 			path = GifticonMoad;
 			sourceTree = "<group>";
@@ -379,7 +376,6 @@
 				D7584DF32A14B82D00B29D68 /* ViewController.swift in Sources */,
 				D789121D2A1F306E00B22258 /* GifticonImageCollectionViewCell.swift in Sources */,
 				D7584DF92A14B82D00B29D68 /* GifticonMoad.xcdatamodeld in Sources */,
-				3C351F4C2BD77099005BE3B8 /* RewardedHelper.swift in Sources */,
 				D708C7892A1B6ED30063CBF0 /* AddGifticonViewController.swift in Sources */,
 				D7584DEF2A14B82D00B29D68 /* AppDelegate.swift in Sources */,
 				D7584DF12A14B82D00B29D68 /* SceneDelegate.swift in Sources */,

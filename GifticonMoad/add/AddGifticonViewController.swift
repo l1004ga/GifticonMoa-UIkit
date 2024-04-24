@@ -14,7 +14,7 @@ protocol AddGifticonViewControllerDelegate: AnyObject {
 }
 
 class AddGifticonViewController: UIViewController {
-        
+    
     weak var delegate : AddGifticonViewControllerDelegate?
     
     @IBOutlet var addImageBtn: UIButton!
@@ -119,7 +119,7 @@ class AddGifticonViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-
+    
     @objc private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
@@ -226,7 +226,10 @@ class AddGifticonViewController: UIViewController {
         // 처음 등록 시에는 '사용 가능' 상태로 저장됨
         object.status = usingStatus
         
-        self.makeRequestNoti(id: object.uuid!, store: object.store! , expiration: object.expiration!)
+        // 9. 알림 생성 - 새로 만들는 경우만 실행되는 함수로, false일 경우 알림 생성하지 않음
+        if usingStatus {
+            object.alert = self.makeRequestNoti(store: object.store! , expiration: object.expiration!)
+        }
         
         appDelegate.saveContext()
         
@@ -263,6 +266,15 @@ class AddGifticonViewController: UIViewController {
             loadedData.first?.uuid = hasUUID
             loadedData.first?.status = usingStatus
             
+            // 사용 가능 상태일 경우 알림 데이터 재생성 기존 데이터 삭제 및 알람 재설정
+            if let uuids = loadedData.first?.alert {
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: uuids)
+            }
+            
+            if usingStatus {
+                loadedData.first?.alert = self.makeRequestNoti(store: gifticonStore.text ?? "사용처 불명" , expiration: gifticonExpire.date)
+            }
+            
             
         } catch {
             print(error)
@@ -288,6 +300,10 @@ class AddGifticonViewController: UIViewController {
         do {
             let loadedData = try context.fetch(fetchRequest)
             
+            if let uuids = loadedData.first?.alert {
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: uuids)
+            }
+        
             if let hasData = loadedData.first {
                 context.delete(hasData)
                 appDelegate.saveContext()
@@ -295,6 +311,8 @@ class AddGifticonViewController: UIViewController {
         } catch {
             print(error)
         }
+        
+        
         
         delegate?.didFinishSaveData()
         self.dismiss(animated: true)
@@ -344,18 +362,22 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         return newImage!
     }
     
-    @objc private func putDataInNotiCenter(id: UUID, expirationDate : Date, content : UNMutableNotificationContent) {
+    @objc private func putDataInNotiCenter(expirationDate : Date, content : UNMutableNotificationContent) -> String {
         let DateComponets = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: expirationDate)
+        let id = UUID().uuidString
         let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponets, repeats: false)
-        let request = UNNotificationRequest(identifier: id.uuidString, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
         UNUserNotificationCenter.current()
             .add(request) { error in
                 guard let error = error else { return }
                 print(error.localizedDescription)
             }
+        return id
     }
     
-    @objc private func makeRequestNoti(id : UUID, store : String, expiration : Date) {
+    @objc private func makeRequestNoti(store : String, expiration : Date) -> [String] {
+        
+        var generatedNotiIDs : [String] = []
         
         let content = UNMutableNotificationContent()
         content.title = "기프티콘 유효기간이 끝나가요!"
@@ -366,31 +388,38 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         /// 총 4개의 알림(7일, 3일, 1일, 당일)
         /// 당일의 경우 expiration 자체로 확인할 수 있음
         if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -6, to: expiration)!) == "Future" {
+            let calendar = Calendar.current
+            
             let notiDates = [0,1,3,7]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         } else if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -2, to: expiration)!) == "Future" {
             let notiDates = [0,1,3]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         } else if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -1, to: expiration)!) == "Future"   {
             let notiDates = [0,1]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         } else if Date().dateCompare(fromDate: expiration) == "Future"   { //당일 알림
             let notiDates = [0]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                putDataInNotiCenter(id: id, expirationDate: expirationDate!, content: content)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         }
         /// 당일, 이미 만료된 일정을 입력할 경우 수행되지 않음
+        return generatedNotiIDs
     }
 }
 
@@ -408,22 +437,22 @@ extension UIViewController {
 
 extension Date {
     public func dateCompare(fromDate: Date) -> String {
-            var strDateMessage:String = ""
-            let result:ComparisonResult = self.compare(fromDate)
-            switch result {
-            case .orderedAscending:
-                strDateMessage = "Future"
-                break
-            case .orderedDescending:
-                strDateMessage = "Past"
-                break
-            case .orderedSame:
-                strDateMessage = "Same"
-                break
-            default:
-                strDateMessage = "Error"
-                break
-            }
-            return strDateMessage
+        var strDateMessage:String = ""
+        let result:ComparisonResult = self.compare(fromDate)
+        switch result {
+        case .orderedAscending:
+            strDateMessage = "Future"
+            break
+        case .orderedDescending:
+            strDateMessage = "Past"
+            break
+        case .orderedSame:
+            strDateMessage = "Same"
+            break
+        default:
+            strDateMessage = "Error"
+            break
         }
+        return strDateMessage
+    }
 }

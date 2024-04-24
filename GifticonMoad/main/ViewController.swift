@@ -152,33 +152,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func addGifiton(_ sender: Any) {
         
-//        // 기존에 생성된 기프티콘 개수가 5이상일 때
-//        if self.gifticonCount >= 5 {
-//            let alert = UIAlertController(title: "기프티콘 개수 초과", message: "추가로 기프티콘을 생성을 위해 광고를 시청하시겠습니까?", preferredStyle: .alert)
-//            let yes = UIAlertAction(title: "Yes", style: .default, handler: {[self]_ in
-//                    rewardHelper.showRewardedAd(
-//                        viewController: self,
-//                        complition: {
-//                            print("컴플리션 실행됨")
-//                            let storyboard = UIStoryboard.init(name: "AddGifticon", bundle: nil)
-//                            
-//                            guard let addGifticonVC = storyboard.instantiateViewController(withIdentifier: "AddGifticonViewController") as? AddGifticonViewController else { return }
-//                            
-//                            addGifticonVC.modalPresentationStyle = .fullScreen
-//                            // 아래 delegate 연결을 해놔야 AddGifticonViewControllerDelegate로 호출 가능
-//                            addGifticonVC.delegate = self
-//                            
-//                            self.present(addGifticonVC, animated: true)
-//                        }
-//                    )
-//            })
-//            let no = UIAlertAction(title: "No", style: .destructive, handler: nil)
-//            alert.addAction(no)
-//            alert.addAction(yes)
-//            present(alert, animated: true, completion: nil)
-//            
-//        }
-        
         if self.gifticonCount >= 5 {
             
             let alert = UIAlertController(title: "기프티콘 개수 초과", message: "추가로 기프티콘을 생성을 위해 광고를 시청하시겠습니까?", preferredStyle: .alert)
