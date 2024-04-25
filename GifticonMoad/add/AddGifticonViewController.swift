@@ -393,28 +393,28 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
             let notiDates = [0,1,3,7]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expirationDate ?? expiration)
                 generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         } else if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -2, to: expiration)!) == "Future" {
             let notiDates = [0,1,3]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expirationDate ?? expiration)
                 generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         } else if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -1, to: expiration)!) == "Future"   {
             let notiDates = [0,1]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expirationDate ?? expiration)
                 generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         } else if Date().dateCompare(fromDate: expiration) == "Future"   { //당일 알림
             let notiDates = [0]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
-                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expiration)
+                let expirationDateWithTime = Calendar.current.date(bySettingHour: 09, minute: 30, second: 00, of: expirationDate ?? expiration)
                 generatedNotiIDs.append(putDataInNotiCenter(expirationDate: expirationDateWithTime!, content: content))
             }
         }
