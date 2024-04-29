@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let imageView : UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named:"cardEmpty")
+        iv.image = UIImage(named:"emptyCards")
         iv.contentMode = .scaleAspectFit
         return iv
     }()
