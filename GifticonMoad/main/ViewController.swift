@@ -31,11 +31,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var gifticonCount : Int = 0
     
-    let imageView : UIImageView = {
+    let emptyView : UIView = {
+        let emptyView = UIView()
         let iv = UIImageView()
         iv.image = UIImage(named:"emptyCards")
         iv.contentMode = .scaleAspectFit
-        return iv
+        iv.frame.size.height = 300
+        iv.frame.size.width = 100
+        emptyView.addSubview(iv)
+        let label = UILabel()
+        label.text = "신규 기프티콘을 생성해주세요"
+        label.textColor = UIColor.gray
+        label.frame.size.width = 300
+        emptyView.addSubview(label)
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        iv.topAnchor.constraint(equalTo: emptyView.safeAreaLayoutGuide.topAnchor, constant: 100.0).isActive = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: iv.bottomAnchor, constant: 20.0).isActive = true
+        return emptyView
     }()
     
     @IBOutlet weak var gifticonImage: UIImageView!
@@ -75,14 +90,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        view.addSubview(emptyView)
+//        emptyView.addSubview(emptyImage)
+////        emptyView.addSubview(emptyLabel)
         
         loadRewardedAd()
         defaults = UserDefaults.standard.integer(forKey: "gifticonCount")
 
         fetchGifticonData()
         gifticonStatusParsing()
-        
-        
         
         let collection = self.collectionIamgeView.collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -216,7 +232,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+
         guard let enableGifticon = self.gifticonEnable else {
             return self.gifticonList.count
         }
@@ -227,7 +243,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if self.usingStatus {
             if enableGifticon.count == 0 {
-                collectionIamgeView.backgroundView = imageView
+                collectionIamgeView.backgroundView = emptyView
             } else {
                 collectionIamgeView.backgroundView = .init()
             }
@@ -236,7 +252,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             print(disableGifticon.count)
             
             if disableGifticon.count == 0 {
-                collectionIamgeView.backgroundView = imageView
+                collectionIamgeView.backgroundView = emptyView
             } else {
                 collectionIamgeView.backgroundView = .init()
             }
