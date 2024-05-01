@@ -282,11 +282,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let collectionCellWidth = cell.gifticonInfo.frame.width
         
         // 광고 생성을 위한 기프티콘 개수 확인
-        self.gifticonCount = enableGifticon.count
+        self.gifticonCount = enableGifticon.count + disableGifticon.count
         
         if self.usingStatus {
             
-            // TODO: collection 1개 있을 때 가운데 정렬 실기기 확인 필요
             if enableGifticon.count == 1 {
                 
                 print("collectionviewWidth: \(collectionviewWidth) collectionCellWidth : \(collectionCellWidth)")
