@@ -90,9 +90,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.addSubview(emptyView)
-//        emptyView.addSubview(emptyImage)
-////        emptyView.addSubview(emptyLabel)
         
         loadRewardedAd()
         defaults = UserDefaults.standard.integer(forKey: "gifticonCount")

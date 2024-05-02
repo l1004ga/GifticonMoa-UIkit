@@ -27,6 +27,8 @@ class AddGifticonViewController: UIViewController {
     
     @IBOutlet weak var gifticonImage: UIImageView!
     
+    var isImageSelected : Bool = false
+    
     @IBOutlet weak var gifticonMoney: UITextField!
     
     @IBOutlet weak var gifticonStore: UITextField!
@@ -44,6 +46,8 @@ class AddGifticonViewController: UIViewController {
     // 데이터 저장 및 뷰 이동 관련 변수
     
     @IBOutlet weak var deleteBtn: UIButton!
+    
+    @IBOutlet weak var shareBtn: UIButton!
     
     @IBOutlet weak var backBtn: UIButton!
     
@@ -69,6 +73,8 @@ class AddGifticonViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
         self.hideKeyboardWhenTappedAround()
+        
+        self.gifticonImage.image = UIImage(named: "addImageView")
         
         //        self.gifticonStatus.backgroundColor = .blue
         self.gifticonStatus.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
@@ -110,8 +116,10 @@ class AddGifticonViewController: UIViewController {
             
             // 삭제 버튼 보이게
             self.deleteBtn.isHidden = false
+            self.shareBtn.isHidden = false
         } else {
             self.deleteBtn.isHidden = true
+            self.shareBtn.isHidden = false
         }
     }
     
@@ -167,6 +175,14 @@ class AddGifticonViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func shareGifticon(_ sender: Any) {
+        let shareImage: UIImage = self.gifticonImage.image ?? UIImage()
+               var shareObject = [Any]()
+               shareObject.append(shareImage)
+        let activityViewController = UIActivityViewController(activityItems : shareObject, applicationActivities: nil)
+               activityViewController.popoverPresentationController?.sourceView = self.view
+               self.present(activityViewController, animated: true, completion: nil)
+    }
     
     @IBAction func backAddingView(_ sender: Any) {
         self.dismiss(animated: true)
@@ -175,14 +191,19 @@ class AddGifticonViewController: UIViewController {
     @IBAction func saveAddingView(_ sender: Any) {
         if selectedGifticon != nil {
             updateGifticon()
+            // mainView를 다시 그려주기 위해 호출
+            delegate?.didFinishSaveData()
+            
+            self.dismiss(animated: true)
         } else {
-            saveGifticon()
+            if self.isImageSelected {
+                saveGifticon()
+                // mainView를 다시 그려주기 위해 호출
+                delegate?.didFinishSaveData()
+                
+                self.dismiss(animated: true)
+            }
         }
-        
-        // mainView를 다시 그려주기 위해 호출
-        delegate?.didFinishSaveData()
-        
-        self.dismiss(animated: true)
     }
     
     func saveGifticon() {
@@ -196,6 +217,8 @@ class AddGifticonViewController: UIViewController {
         
         if let imageString = gifticonImage.image?.pngData() {
             object.imageInfo = imageString
+        } else {
+            
         }
         
         // 2.교환처
@@ -359,6 +382,7 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         image.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        self.isImageSelected = true
         return newImage!
     }
     
@@ -388,8 +412,6 @@ extension AddGifticonViewController: UIImagePickerControllerDelegate, UINavigati
         /// 총 4개의 알림(7일, 3일, 1일, 당일)
         /// 당일의 경우 expiration 자체로 확인할 수 있음
         if Date().dateCompare(fromDate: Calendar.current.date(byAdding: .day, value: -6, to: expiration)!) == "Future" {
-            let calendar = Calendar.current
-            
             let notiDates = [0,1,3,7]
             for dateOfMinus in notiDates{
                 let expirationDate = Calendar.current.date(byAdding: .day, value: -dateOfMinus, to: expiration)
